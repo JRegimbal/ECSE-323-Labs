@@ -1,0 +1,26 @@
+{P:/ECSE 323/work/g55_lab1.vhd} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/work/g55_lab1.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_lab1
+-- Compiling architecture bdf_type of g55_lab1
+
+} {} {}} {P:/ECSE 323/work/simulation/modelsim/g55_lab1_complete.vht} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/work/simulation/modelsim/g55_lab1_complete.vht}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g55_lab1_vhd_tst
+-- Compiling architecture g55_lab1_arch of g55_lab1_vhd_tst
+
+} {} {}} {P:/ECSE 323/work/g55_comp6.vhd} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/work/g55_comp6.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_comp6
+-- Compiling architecture bdf_type of g55_comp6
+
+} {} {}}

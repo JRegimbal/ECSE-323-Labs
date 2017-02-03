@@ -1,0 +1,367 @@
+m255
+K3
+13
+cModel Technology
+dC:\McGill\Software_Install\EDU\Altera\13.0sp1
+Eg55_adder
+Z0 w1485814568
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dP:\ECSE 323\lab1\lab1
+Z4 8P:/ECSE 323/lab1/lab1/g55_adder.vhd
+Z5 FP:/ECSE 323/lab1/lab1/g55_adder.vhd
+l0
+L24
+ViQK?K4EB_Yk7Z6^o_@IOZ1
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1485966899.056000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/lab1/lab1/g55_adder.vhd|
+Z9 !s107 P:/ECSE 323/lab1/lab1/g55_adder.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 SZJ;I7[?eA^9TnH34CAYL3
+!i10b 1
+Abdf_type
+R1
+R2
+DEx4 work 9 g55_adder 0 22 iQK?K4EB_Yk7Z6^o_@IOZ1
+l49
+L33
+VVgT;QSXBJ?I?gb5864GDM2
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 O<6;FEcScGRDEKJW0Z6HM0
+!i10b 1
+Eg55_adder_single
+Z12 w1485814847
+R1
+R2
+R3
+Z13 8P:/ECSE 323/lab1/lab1/g55_adder_single.vhd
+Z14 FP:/ECSE 323/lab1/lab1/g55_adder_single.vhd
+l0
+L24
+V[l@aSeoZ[f<S:Qnh?BVzU0
+R6
+32
+Z15 !s108 1485966899.494000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/lab1/lab1/g55_adder_single.vhd|
+Z17 !s107 P:/ECSE 323/lab1/lab1/g55_adder_single.vhd|
+R10
+R11
+!s100 dM3>LVaOk1?SznaUNzXe01
+!i10b 1
+Abdf_type
+R1
+R2
+DEx4 work 16 g55_adder_single 0 22 [l@aSeoZ[f<S:Qnh?BVzU0
+l44
+L35
+Vk<NF[giA=mV2@1:XX9@b23
+R6
+32
+R15
+R16
+R17
+R10
+R11
+!s100 MCZLBb4HiDGdEm]`IW[^Z1
+!i10b 1
+Eg55_adder_test
+Z18 w1485813833
+Z19 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R3
+Z20 8P:\ECSE 323\lab1\lab1\g55_adder_tst.vht
+Z21 FP:\ECSE 323\lab1\lab1\g55_adder_tst.vht
+l0
+L6
+Vciil1?6PKoIQoi3L]GM0l3
+R6
+32
+Z22 !s108 1485814868.125000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:\ECSE 323\lab1\lab1\g55_adder_tst.vht|
+Z24 !s107 P:\ECSE 323\lab1\lab1\g55_adder_tst.vht|
+R10
+R11
+!s100 IBX]QPDAAahl2<7mIcc<J2
+!i10b 1
+Ag55_adder_arch
+R19
+R1
+R2
+DEx4 work 14 g55_adder_test 0 22 ciil1?6PKoIQoi3L]GM0l3
+l23
+L9
+VWT_V]bh8`2P[iKS`DJ0`M3
+R6
+32
+R22
+R23
+R24
+R10
+R11
+!s100 0=FdX:`^j9heXDWc82]KF2
+!i10b 1
+Eg55_adder_vhd_tst
+Z25 w1485813161
+R19
+R1
+R2
+R3
+R20
+R21
+l0
+L6
+V27XDDJYeUAY6MNn8TlbJ63
+R6
+32
+Z26 !s108 1485813271.097000
+R23
+R24
+R10
+R11
+!s100 [a3SgG?QAi_T@:XPCdUDO0
+!i10b 1
+Ag55_adder_arch
+R19
+R1
+R2
+DEx4 work 17 g55_adder_vhd_tst 0 22 27XDDJYeUAY6MNn8TlbJ63
+l23
+L9
+VUC:md3;HA11O9KNR<D2Io3
+R6
+32
+R26
+R23
+R24
+R10
+R11
+!s100 J3fXHNFXelOIfYVO7RZUL1
+!i10b 1
+Eg55_comp6
+R1
+R2
+32
+Z27 w1485203570
+Z28 dP:\ECSE 323\work
+Z29 8P:/ECSE 323/work/g55_comp6.vhd
+Z30 FP:/ECSE 323/work/g55_comp6.vhd
+l0
+L24
+VGOdiU]QXZOOzN1_bIh5GN2
+R6
+Z31 !s108 1485204275.121000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/work/g55_comp6.vhd|
+Z33 !s107 P:/ECSE 323/work/g55_comp6.vhd|
+R10
+R11
+!i10b 1
+!s100 4Gk4?MWjhXN4AT]ioo6UD2
+Abdf_type
+R1
+R2
+DEx4 work 9 g55_comp6 0 22 GOdiU]QXZOOzN1_bIh5GN2
+32
+l45
+L33
+VhOYC1K7QzSXT6I351CiR61
+R6
+R31
+R32
+R33
+R10
+R11
+!i10b 1
+!s100 `oAV@@<;Q>X65micUDVIP0
+Eg55_lab1
+R1
+R2
+32
+Z34 w1485203571
+R28
+Z35 8P:/ECSE 323/work/g55_lab1.vhd
+Z36 FP:/ECSE 323/work/g55_lab1.vhd
+l0
+L24
+Vgz<DfjEmzfEd7n`eKnC2N3
+R6
+Z37 !s108 1485204275.746000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/work/g55_lab1.vhd|
+Z39 !s107 P:/ECSE 323/work/g55_lab1.vhd|
+R10
+R11
+!i10b 1
+!s100 ^]O2:[_`ooJY8W3fT;BYK0
+Abdf_type
+R1
+R2
+DEx4 work 8 g55_lab1 0 22 gz<DfjEmzfEd7n`eKnC2N3
+32
+l44
+L33
+V3nMYbBXbBdJPGRhhf7b?j0
+R6
+R37
+R38
+R39
+R10
+R11
+!i10b 1
+!s100 `diGaej]B>d27YHh?zmg_0
+Eg55_lab1_vhd_tst
+R19
+R1
+R2
+32
+Z40 w1485205943
+R28
+Z41 8P:/ECSE 323/work/simulation/modelsim/g55_lab1_complete.vht
+Z42 FP:/ECSE 323/work/simulation/modelsim/g55_lab1_complete.vht
+l0
+L6
+V?Qz;Y8IKfEK;nCJ2i@5l41
+R6
+Z43 !s108 1485205979.893000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/work/simulation/modelsim/g55_lab1_complete.vht|
+Z45 !s107 P:/ECSE 323/work/simulation/modelsim/g55_lab1_complete.vht|
+R10
+R11
+!i10b 1
+!s100 I7:L2_m:z1<6<FlPFRHjU1
+Ag55_lab1_arch
+R19
+R1
+R2
+DEx4 work 16 g55_lab1_vhd_tst 0 22 ?Qz;Y8IKfEK;nCJ2i@5l41
+32
+l22
+L9
+VIF]laDMBi]5P7E[F2nCmL0
+R6
+R43
+R44
+R45
+R10
+R11
+!i10b 1
+!s100 eRV;B2miIRhl56kV;@W4;0
+Eg55_mod13
+Z46 w1485962022
+R19
+R1
+R2
+R3
+Z47 8P:/ECSE 323/lab1/lab1/g55_mod13.vhd
+Z48 FP:/ECSE 323/lab1/lab1/g55_mod13.vhd
+l0
+L25
+VEJh_X9TIIG2_YFIXmgQ4D0
+R6
+32
+Z49 !s108 1485966899.880000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/lab1/lab1/g55_mod13.vhd|
+Z51 !s107 P:/ECSE 323/lab1/lab1/g55_mod13.vhd|
+R10
+R11
+!s100 GZVY;fZXO<]M_lWhL^H7_2
+!i10b 1
+Abdf_type
+R19
+R1
+R2
+DEx4 work 9 g55_mod13 0 22 EJh_X9TIIG2_YFIXmgQ4D0
+l60
+L35
+Vz[ah^;Rioo:?:Qn6_4b;h3
+R6
+32
+R49
+R50
+R51
+R10
+R11
+!s100 ?k19l>=oRna=EAOWR93Eo2
+!i10b 1
+Eg55_mod13_tst_vht
+Z52 w1485966853
+R19
+R1
+R2
+R3
+Z53 8P:/ECSE 323/lab1/lab1/simulation/modelsim/g55_mod13_tst_vht.vht
+Z54 FP:/ECSE 323/lab1/lab1/simulation/modelsim/g55_mod13_tst_vht.vht
+l0
+L6
+VPUJJ^A]^:Iie5bG=[MoGK0
+R6
+32
+Z55 !s108 1485966900.287000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/lab1/lab1/simulation/modelsim/g55_mod13_tst_vht.vht|
+Z57 !s107 P:/ECSE 323/lab1/lab1/simulation/modelsim/g55_mod13_tst_vht.vht|
+R10
+R11
+!s100 GE^n@@X7JI=5C1B0HP^Xe0
+!i10b 1
+Ag55_mod13_arch
+R19
+R1
+R2
+DEx4 work 17 g55_mod13_tst_vht 0 22 PUJJ^A]^:Iie5bG=[MoGK0
+l21
+L10
+VK;nmRHjhK>A_=DQVce4Dg0
+!s100 c3D1YZLNOOES4QbF>_aN]2
+R6
+32
+R55
+R56
+R57
+R10
+R11
+!i10b 1
+Eg55_mod13_v2
+Z58 w1485966895
+R19
+R1
+R2
+R3
+Z59 8P:/ECSE 323/lab1/lab1/g55_mod13_v2.vhdl
+Z60 FP:/ECSE 323/lab1/lab1/g55_mod13_v2.vhdl
+l0
+L7
+V8JX6laibh:JJ2cJ:G3@Ha2
+!s100 i6g]kZX8cRc_>nFToA:e93
+R6
+32
+!i10b 1
+Z61 !s108 1485966900.644000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|P:/ECSE 323/lab1/lab1/g55_mod13_v2.vhdl|
+Z63 !s107 P:/ECSE 323/lab1/lab1/g55_mod13_v2.vhdl|
+R10
+R11
+Abdf_type
+R19
+R1
+R2
+DEx4 work 12 g55_mod13_v2 0 22 8JX6laibh:JJ2cJ:G3@Ha2
+l40
+L16
+V_12`GgfP_;0BKWOV]693z2
+!s100 CJ^]jc[:n]m;j@Z4Y:?1V0
+R6
+32
+!i10b 1
+R61
+R62
+R63
+R10
+R11

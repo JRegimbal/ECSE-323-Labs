@@ -1,0 +1,44 @@
+{P:/ECSE 323/lab1/lab1/g55_mod13_v2.vhdl} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/lab1/lab1/g55_mod13_v2.vhdl}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g55_mod13_v2
+-- Compiling architecture bdf_type of g55_mod13_v2
+
+} {} {}} {P:/ECSE 323/lab1/lab1/g55_mod13.vhd} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/lab1/lab1/g55_mod13.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g55_mod13
+-- Compiling architecture bdf_type of g55_mod13
+
+} {} {}} {P:/ECSE 323/lab1/lab1/g55_adder.vhd} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/lab1/lab1/g55_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_adder
+-- Compiling architecture bdf_type of g55_adder
+
+} {} {}} {P:/ECSE 323/lab1/lab1/simulation/modelsim/g55_mod13_tst_vht.vht} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/lab1/lab1/simulation/modelsim/g55_mod13_tst_vht.vht}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g55_mod13_tst_vht
+-- Compiling architecture g55_mod13_arch of g55_mod13_tst_vht
+
+} {} {}} {P:/ECSE 323/lab1/lab1/g55_adder_single.vhd} {1 {vcom -work work -2002 -explicit {P:/ECSE 323/lab1/lab1/g55_adder_single.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_adder_single
+-- Compiling architecture bdf_type of g55_adder_single
+
+} {} {}}
