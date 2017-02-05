@@ -54,12 +54,30 @@ The multiplication by 13 can be done in a similar way to multiplication by 5. 13
 \subsection{g55\_comp6}
 The g55\_comp6 circuit was tested through g55\_lab1, which uses it as a component. Two testbenches were used. The first was automatically generated and only does 5 tests: when A and B are both 000000, when A is 101100 and B is 000000, when A and B are both 101100, when A is 111101 and B is 101100, and when A and B are both 111101. The output bit should be 1 in the first, third, and fifth cases and 0 in the second and fourth cases. The second test is more exhaustive, using nested for loops to check all possible combinations of A and B. The \texttt{std\_logic\_vector} and \texttt{to\_unsigned} functions are used to create words to set the inputs, and convert a loop counter to an unsigned integer word respectively.
 
-%Timing Diagrams
+\begin{figure}[h!t]
+\centering
+\includegraphics[scale=0.3]{graphics/comp6_wave.png}
+\caption{\textit{g55\_comp6} Simple Testing}
+\end{figure}
+\begin{figure}[h!b]
+\centering
+\includegraphics[scale=0.3]{graphics/comp6_wave_full.png}
+\caption{\textit{g55\_comp6} Full Testing}
+\end{figure}
 
 \subsection{g55\_mod13}
 Two tests were performed on the g55\_mod13 circuit and one of its components, the g55\_adder circuit. The g55\_adder is tested in a similar fashion as the g55\_comp6: all possible values of the inputs A and B are entered using nested for loops. For the sake of simplicity, the g55\_mod13 is only given 8 preset tests. It is tested with inputs 0, 3, 7, 13, 19, 27, 30 ,and 9 which should yield outputs of 0, 3, 7, 0, 6, 1, 4, and 9 respectively. The values were chosen to provide for a variety of inputs with respect to 13, including 0, an integer less than 13, equal to 13, greater than 13, and greater than 2*13.
 
-%Timing Diagrams
+\begin{figure}[h!t]
+\centering
+\includegraphics[scale=0.3]{graphics/adder_wave.png}
+\caption{\textit{g55\_adder} Testing}
+\end{figure}
+\begin{figure}[h!b]
+\centering
+\includegraphics[scale=0.3]{graphics/mod13_wave.png}
+\caption{\textit{g55\_mod13} Testing}
+\end{figure}
 
 \subsection{Results and Discussion}
 All the tests ran successfully with some tweaking necessary in the case of the g55\_mod13. This success demonstrates the group's ability to design schematics for circuits, use those circuits as components in a modular way, design tests for circuits, and simulate these tests. From here more challenging designs can be attempted. Some important observations were made about the VHDL files generated from the schematics. First, in all cases the generated file is not concise. For example rather than expressing bit shifting with '\texttt{A(5 downto 3) <= B(4 downto 2);}' it would generate '\texttt{A(5) <= B(4); A(4) <= B(3); A(3) <= B(2);}'. For larger circuits this could hinder readability and make referencing old designs or debugging more difficult.\\
