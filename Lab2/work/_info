@@ -1,0 +1,114 @@
+m255
+K3
+13
+cModel Technology
+d/home/juliette/altera/13.0sp1/modelsim_ase
+Eg55_lpm_add_sub
+Z0 w1486416055
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2
+Z4 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd
+Z5 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd
+l0
+L42
+V6JSdWOF[@3lIj^Y1<cnO:0
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1486417021.661379
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd|
+Z9 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 F`lR_HOl^>65]G0W[[P4S1
+!i10b 1
+Asyn
+R1
+R2
+DEx4 work 15 g55_lpm_add_sub 0 22 6JSdWOF[@3lIj^Y1<cnO:0
+l73
+L52
+V1AUR5SX0i47a19;0imHd23
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!s100 Mj:KzNk<7e=6jAoCl;g_@0
+!i10b 1
+Eg55_randu
+Z12 w1486418374
+R1
+R2
+Z13 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
+R3
+Z14 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU.vhd
+Z15 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU.vhd
+l0
+L14
+V4=_05Ib_Tl^=_>Yk@5lkc1
+!s100 d1b@nziP:I>emjE<3]H892
+R6
+32
+!i10b 1
+Z16 !s108 1486418374.948568
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU.vhd|
+Z18 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU.vhd|
+R10
+R11
+Aarchv1
+R1
+R2
+R13
+Z19 DEx4 work 9 g55_randu 0 22 4=_05Ib_Tl^=_>Yk@5lkc1
+l42
+L20
+VI@;NZ?DLBO`kQeHm:zP^@2
+!s100 _Gdzol5m96iV81OTYok`00
+R6
+32
+!i10b 1
+R16
+R17
+R18
+R10
+R11
+Eg55_randu_test
+Z20 w1486417567
+Z21 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R1
+R2
+R3
+Z22 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd
+Z23 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd
+l0
+L12
+V2;5Z5`Kio:V?hFUafV0>;1
+R6
+32
+Z24 !s108 1486417567.916437
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd|
+Z26 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd|
+R10
+R11
+!s100 ;Y:?PXNKcXc_i7E^gg;XL1
+!i10b 1
+Atest
+R21
+R1
+R2
+DEx4 work 14 g55_randu_test 0 22 2;5Z5`Kio:V?hFUafV0>;1
+l24
+L15
+Vf6lW^^EG3AnmeW2d3h>:>3
+R6
+32
+R24
+R25
+R26
+R10
+R11
+!s100 CE2nT5YCN>2A3I]PYX4TD1
+!i10b 1
