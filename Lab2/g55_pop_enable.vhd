@@ -13,13 +13,13 @@ use ieee.std_logic_1164.all;
 
 entity g55_pop_enable is
 	port ( N : in std_logic_vector(5 downto 0);
+			 clk : in std_logic;
 			P_EN : out std_logic_vector(51 downto 0));
 end g55_pop_enable;
 
 architecture behav of g55_pop_enable is
 
 	signal crc_of_x : std_logic_vector(51 downto 0);
-	signal clk : std_logic := '0';
 
 	component g55_lpm_rom
 		port (
@@ -33,10 +33,4 @@ begin
 	crc_table : g55_lpm_rom
 		port map (clock => clk, address => N, q => crc_of_x);
 		P_EN <= crc_of_x;
-		
-		process
-		begin
-		clk <= not clk after 10 ns;
-		end process;
-		
 end architecture;

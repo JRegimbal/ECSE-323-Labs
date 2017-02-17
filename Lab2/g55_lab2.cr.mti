@@ -1,4 +1,13 @@
-{/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd}
+{/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_pop_enable.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_pop_enable.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity g55_pop_enable
+-- Compiling architecture behav of g55_pop_enable
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU_test.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,6 +15,22 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity g55_RANDU_test
 -- Compiling architecture test of g55_RANDU_test
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_rom.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_rom.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_lpm_rom
+-- Compiling architecture SYN of g55_lpm_rom
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_lpm_add_sub
+-- Compiling architecture SYN of g55_lpm_add_sub
 
 } {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_RANDU.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -16,12 +41,14 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity g55_RANDU
 -- Compiling architecture archv1 of g55_RANDU
 
-} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_lpm_add_sub.vhd}
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_pop_enable_test.vhd} {2 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_pop_enable_test.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity g55_lpm_add_sub
--- Compiling architecture SYN of g55_lpm_add_sub
+-- Loading package NUMERIC_STD
+-- Compiling entity g55_pop_enable_test
+-- Compiling architecture behav of g55_pop_enable_test
+** Warning: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_pop_enable_test.vhd(28): (vcom-1236) Shared variables must be of a protected type.
 
 } {} {}}

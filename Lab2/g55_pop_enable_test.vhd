@@ -19,18 +19,33 @@ architecture behav of g55_pop_enable_test is
 	component g55_pop_enable
 		port(
 			N : in std_logic_vector(5 downto 0);
+			clk : in std_logic;
 			P_EN : out std_logic_vector(51 downto 0)
 		);
 	end component;
 	
+	signal clock : std_logic := '0';
+	shared variable finished : std_logic := '0';
+	
 	begin
-	U1 : g55_pop_enable port map(N => add_in, P_EN => output);
+	U1 : g55_pop_enable port map(N => add_in, clk => clock, P_EN => output);
+	clock_control : process
+	begin
+		while finished='0' loop
+			clock <= not clock;
+			wait for 2 ns;
+			clock <= not clock;
+			wait for 2 ns;
+		end loop;
+	end process;
+	
 	testbench : process
 	begin
 		for i in 0 to 63 loop
-			wait for 20 ns;
 			add_in <= std_logic_vector(to_unsigned(i, 6));
+			wait for 8 ns;
 		end loop;
+		finished := '1';
 	end process;
 end architecture;
 	
