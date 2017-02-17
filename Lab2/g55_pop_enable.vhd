@@ -19,18 +19,24 @@ end g55_pop_enable;
 architecture behav of g55_pop_enable is
 
 	signal crc_of_x : std_logic_vector(51 downto 0);
+	signal clk : std_logic := '0';
 
+	component g55_lpm_rom
+		port (
+			clock : in std_logic;
+			address : in std_logic_vector(5 downto 0);
+			q : out std_logic_vector(51 downto 0)
+		);
+	end component;
+	
 begin
-	crc_table : lpm_rom
-	generic map(
-		lpm_widthad => 6,
-		lpm_numwords => 64,
-		lpm_outdata => "UNREGISTERED",
-		lpm_address_control => "REGISTERED"
-		lpm_file => "crc_rom.mif",
-		lpm_width => 52)
+	crc_table : g55_lpm_rom
 		port map (clock => clk, address => N, q => crc_of_x);
-		
 		P_EN <= crc_of_x;
+		
+		process
+		begin
+		clk <= not clk after 10 ns;
+		end process;
 		
 end architecture;
