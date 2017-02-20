@@ -12,7 +12,7 @@ entity g55_stack52 is
 		value : out std_logic_vector(5 downto 0);
 		empty : out std_logic;
 		full : out std_logic;
-		num : out std_logic_vector(5 downto 0)
+		num : out std_logic_vector(5 downto 0) := "000000"
 	);
 end g55_stack52;
 
