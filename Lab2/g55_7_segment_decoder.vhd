@@ -19,7 +19,8 @@ end g55_7_segment_decoder;
 architecture behav of g55_7_segment_decoder is
 	signal xcode : std_logic_vector(4 downto 0);
 	begin
-		xcode <= code & mode;
+		xcode(4 downto 1) <= code;
+		xcode(0) <= mode;
 		with xcode select
 		segments_out <=
 			"1000000" when "00000", -- code = 0, mode = 0
@@ -54,5 +55,5 @@ architecture behav of g55_7_segment_decoder is
 			"0111111" when "11101", -- -
 			"0000111" when "11110", -- F
 			"0111111" when "11111", -- -
-			"XXXXXX" when others;
+			"XXXXXXX" when others;
 end architecture;

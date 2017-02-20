@@ -1,85 +1,66 @@
 # reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
 # Loading project g55_lab2
-# Compile of g55_7_segment_decoder.vhd failed with 1 errors.
+# Compile of g55_lpm_add_sub.vhd was successful.
+# Compile of g55_RANDU.vhd was successful.
+# Compile of g55_RANDU_test.vhd was successful.
+# Compile of g55_lpm_rom.vhd was successful.
+# Compile of g55_pop_enable.vhd was successful.
+# Compile of g55_pop_enable_test.vhd was successful with warnings.
+# Compile of g55_7_segment_decoder.vhd was successful with warnings.
 # Compile of g55_lab2.vhd was successful.
 # Compile of g55_lab2_test.vhd was successful with warnings.
-# 3 compiles, 1 failed with 1 error. 
-# Compile of g55_7_segment_decoder.vhd failed with 1 errors.
-# Compile of g55_7_segment_decoder.vhd was successful with warnings.
-vsim work.g55_lab2_test
-# vsim work.g55_lab2_test 
+# 9 compiles, 0 failed with no errors. 
+# Compile of g55_7_segment_testbench.vhd was successful.
+vsim work.g55_7_segment_testbench
+# vsim work.g55_7_segment_testbench 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.g55_lab2_test(behav)
-# Loading work.g55_lab2(behav)
-# Loading lpm.lpm_components
-# Loading work.g55_pop_enable(behav)
-# Loading work.g55_lpm_rom(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading altera_mf.altera_common_conversion(body)
-# Loading altera_mf.altera_device_families(body)
-# Loading altera_mf.altsyncram(translated)
+# Loading work.g55_7_segment_testbench(testbench)
 # Loading work.g55_7_segment_decoder(behav)
-add wave -position end  sim:/g55_lab2_test/clock
-add wave -position end  sim:/g55_lab2_test/xcode
-add wave -position end  sim:/g55_lab2_test/N
-add wave -position end  sim:/g55_lab2_test/P_EN
-add wave -position end  sim:/g55_lab2_test/segments
+add wave -position end  sim:/g55_7_segment_testbench/xcode
+add wave -position end  sim:/g55_7_segment_testbench/segments
 run
 # ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 6 (6 downto 1).
-#    Time: 0 ps  Iteration: 0  Process: /g55_lab2_test/U0/U1/line__25 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd
+#    Time: 0 ps  Iteration: 0  Process: /g55_7_segment_testbench/U0/line__25 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd
 # Fatal error in Architecture behav at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd line 57
 # 
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-restart
-run
-# Break in Architecture behav at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd line 57
-step -over
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 6 (6 downto 1).
-#    Time: 0 ps  Iteration: 0  Process: /g55_lab2_test/U0/U1/line__25 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd
-# Fatal error in Architecture behav at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd line 57
-# 
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-step -over
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-step -over
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-step -over
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-step -over
-# Cannot continue because of fatal error.
 # HDL call sequence:
 # Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
 # 
 quit -sim
+# Compile of g55_7_segment_decoder.vhd was successful with warnings.
+vsim work.g55_7_segment_testbench
+# vsim work.g55_7_segment_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.g55_7_segment_testbench(testbench)
+# Loading work.g55_7_segment_decoder(behav)
+add wave -position end  sim:/g55_7_segment_testbench/segments
+add wave -position end  sim:/g55_7_segment_testbench/xcode
+run
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 6 (6 downto 1).
+#    Time: 0 ps  Iteration: 0  Process: /g55_7_segment_testbench/U0/line__26 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd
+# Fatal error in Architecture behav at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd line 58
+# 
+# HDL call sequence:
+# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 58 Architecture behav
+# 
+quit -sim
+# Compile of g55_7_segment_decoder.vhd was successful.
+vsim work.g55_7_segment_testbench
+# vsim work.g55_7_segment_testbench 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.g55_7_segment_testbench(testbench)
+# Loading work.g55_7_segment_decoder(behav)
+add wave -position end  sim:/g55_7_segment_testbench/segments
+add wave -position end  sim:/g55_7_segment_testbench/xcode
+run
+restart
+run
