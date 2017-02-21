@@ -1,0 +1,27 @@
+{/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity g55_pop_enable
+-- Compiling architecture behav of g55_pop_enable
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lpm_rom.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lpm_rom.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_lpm_rom
+-- Compiling architecture SYN of g55_lpm_rom
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack_slot.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack_slot.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity g55_stack_slot
+-- Compiling architecture behav of g55_stack_slot
+
+} {} {}}

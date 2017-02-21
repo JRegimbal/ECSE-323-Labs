@@ -1,66 +1,19 @@
 # reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
 # Loading project g55_lab2
-# Compile of g55_lpm_add_sub.vhd was successful.
-# Compile of g55_RANDU.vhd was successful.
-# Compile of g55_RANDU_test.vhd was successful.
+# reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
+# Loading project g55_lab3
 # Compile of g55_lpm_rom.vhd was successful.
 # Compile of g55_pop_enable.vhd was successful.
-# Compile of g55_pop_enable_test.vhd was successful with warnings.
-# Compile of g55_7_segment_decoder.vhd was successful with warnings.
-# Compile of g55_lab2.vhd was successful.
-# Compile of g55_lab2_test.vhd was successful with warnings.
-# 9 compiles, 0 failed with no errors. 
-# Compile of g55_7_segment_testbench.vhd was successful.
-vsim work.g55_7_segment_testbench
-# vsim work.g55_7_segment_testbench 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.g55_7_segment_testbench(testbench)
-# Loading work.g55_7_segment_decoder(behav)
-add wave -position end  sim:/g55_7_segment_testbench/xcode
-add wave -position end  sim:/g55_7_segment_testbench/segments
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 6 (6 downto 1).
-#    Time: 0 ps  Iteration: 0  Process: /g55_7_segment_testbench/U0/line__25 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd
-# Fatal error in Architecture behav at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd line 57
-# 
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 57 Architecture behav
-# 
-quit -sim
-# Compile of g55_7_segment_decoder.vhd was successful with warnings.
-vsim work.g55_7_segment_testbench
-# vsim work.g55_7_segment_testbench 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.g55_7_segment_testbench(testbench)
-# Loading work.g55_7_segment_decoder(behav)
-add wave -position end  sim:/g55_7_segment_testbench/segments
-add wave -position end  sim:/g55_7_segment_testbench/xcode
-run
-# ** Fatal: (vsim-3420) Array lengths do not match. Left is 7 (6 downto 0). Right is 6 (6 downto 1).
-#    Time: 0 ps  Iteration: 0  Process: /g55_7_segment_testbench/U0/line__26 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd
-# Fatal error in Architecture behav at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd line 58
-# 
-# HDL call sequence:
-# Stopped at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab2/g55_7_segment_decoder.vhd 58 Architecture behav
-# 
-quit -sim
-# Compile of g55_7_segment_decoder.vhd was successful.
-vsim work.g55_7_segment_testbench
-# vsim work.g55_7_segment_testbench 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.g55_7_segment_testbench(testbench)
-# Loading work.g55_7_segment_decoder(behav)
-add wave -position end  sim:/g55_7_segment_testbench/segments
-add wave -position end  sim:/g55_7_segment_testbench/xcode
-run
-restart
-run
+# Compile of g55_stack52.vhd failed with 3 errors.
+# Compile of g55_stack_slot.vhd was successful.
+# 4 compiles, 1 failed with 3 errors. 
+# Compile of g55_stack52.vhd failed with 3 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of g55_stack52.vhd was successful.
