@@ -64,7 +64,6 @@ architecture behav of g55_stack52 is
 			LPM_WIDTHS : integer);
 		port(
 			data : in multi;
-			clock : in std_logic;
 			sel : in std_logic_vector(LPM_WIDTHS-1 downto 0);
 			result : out std_logic_vector(LPM_WIDTH-1 downto 0)
 		);
@@ -120,27 +119,27 @@ begin
 	--State system (set different enables based on input)
 	process(enable, mode)
 	begin
-	case enable is -- do nothing based on mode input
-		when '0' =>	
-			enableArray <= std_logic_vector(to_unsigned(0, 52));
-			enableNum <= '0';
-		when others =>
-			case mode is
-				when "00" =>	-- nop
-					enableNum <= '0';
-					enableArray <= std_logic_vector(to_unsigned(0, 52));
-				when "01" =>	-- init
-					enableNum <= '1';
-					enableArray <= not std_logic_vector(to_unsigned(0, 52));
-				when "10" =>	-- pop
-					enableNum <= '1';
-					enableArray <= enableTemp; -- only set certain slots to shift
-				when "11" =>	-- push
-					enableNum <= '1';
-					enableArray <= not std_logic_vector(to_unsigned(0, 52)); -- all must shift during push
-				when others => null;
-			end case;
-   end case;
+		case enable is -- do nothing based on mode input
+			when '0' =>	
+				enableArray <= std_logic_vector(to_unsigned(0, 52));
+				enableNum <= '0';
+			when others =>
+				case mode is
+					when "00" =>	-- nop
+						enableNum <= '0';
+						enableArray <= std_logic_vector(to_unsigned(0, 52));
+					when "01" =>	-- init
+						enableNum <= '1';
+						enableArray <= not std_logic_vector(to_unsigned(0, 52));
+					when "10" =>	-- pop
+						enableNum <= '1';
+						enableArray <= enableTemp; -- only set certain slots to shift
+					when "11" =>	-- push
+						enableNum <= '1';
+						enableArray <= not std_logic_vector(to_unsigned(0, 52)); -- all must shift during push
+					when others => null;
+				end case;
+		end case;
 	end process;
 	
 	-- counter for num (increment/decrement)
@@ -150,7 +149,7 @@ begin
 	E0 : g55_pop_enable port map(N => addr, clk => clk, P_EN => enableTemp);
 	-- muxer for outputting value of slot at addr
 	M0 : lpm_mux generic map(LPM_SIZE => 52, LPM_WIDTH => 6, LPM_WIDTHS => 6)
-		port map(data => q, clock => clk, sel => addr, result => value);
+		port map(data => q, sel => addr, result => value);
 		
 	--stack slots (0 through 51) each Sn resets to n on init, 
 	S0 : g55_stack_slot generic map (WIDTH => 6, INIT => 0)
