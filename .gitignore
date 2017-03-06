@@ -2,7 +2,6 @@
 #*.png
 *.bak
 /db
-/simulation
 /incremental_db
 *.sof
 *.rpt

@@ -1,0 +1,188 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim
+Eg55_lab3
+Z1 w1487779042
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim
+Z5 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lab3.vhd
+Z6 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lab3.vhd
+l0
+L4
+Vc8Ek;5I?JGS4GA?;YMm]M0
+!s100 bF3fC7SXG7FN2Vf0`n4]:2
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1488312464.174812
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lab3.vhd|
+Z10 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lab3.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Abehav
+R2
+R3
+DEx4 work 8 g55_lab3 0 22 c8Ek;5I?JGS4GA?;YMm]M0
+l34
+L19
+VV>81iY[afD?VNIIb1kajJ3
+!s100 56HHJ7^[:8`6ACe5D2m0J3
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12
+Eg55_lpm_rom
+Z13 w1487335866
+R2
+R3
+R4
+Z14 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lpm_rom.vhd
+Z15 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lpm_rom.vhd
+l0
+L42
+VNg>aN5Z0B<VQMFj^l_YA:3
+R7
+31
+Z16 !s108 1488312464.040033
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lpm_rom.vhd|
+Z18 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lpm_rom.vhd|
+R11
+R12
+!s100 k?VZdCOE03fOL5CJCUb2:0
+!i10b 1
+Asyn
+R2
+R3
+DEx4 work 11 g55_lpm_rom 0 22 Ng>aN5Z0B<VQMFj^l_YA:3
+l81
+L52
+V`lWk=Yi_ej5L4igM@PiK;3
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 Wo7;iV_b]XE]PccDNg1K@2
+!i10b 1
+Eg55_pop_enable
+Z19 w1487337330
+R2
+R3
+Z20 DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
+R4
+Z21 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd
+Z22 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd
+l0
+L14
+V2bz1BkV:;RM2:lR6be?Ja0
+R7
+31
+Z23 !s108 1488312464.067496
+Z24 !s90 -reportprogress|300|-93|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd|
+Z25 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd|
+R11
+R12
+!s100 @18Jgje1oAPhl<oQ49Cc<1
+!i10b 1
+Abehav
+R2
+R3
+R20
+DEx4 work 14 g55_pop_enable 0 22 2bz1BkV:;RM2:lR6be?Ja0
+l32
+L20
+VX6I0H<QK3SD=TO<bLT^cb2
+R7
+31
+R23
+R24
+R25
+R11
+R12
+!s100 FST02=Z;6UJN1=FjdkFG21
+!i10b 1
+Eg55_stack52
+Z26 w1488309142
+R20
+Z27 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z28 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52.vhd
+Z29 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52.vhd
+l0
+L7
+V=Bj3cJi_80M<4[SY2ClDe0
+R7
+31
+Z30 !s108 1488312464.128187
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52.vhd|
+Z32 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52.vhd|
+R11
+R12
+!s100 VPS7a8V7CMaz7zAnd6^bU3
+!i10b 1
+Abehav
+R20
+R27
+R2
+R3
+DEx4 work 11 g55_stack52 0 22 =Bj3cJi_80M<4[SY2ClDe0
+l108
+L22
+Vb]KDRe0CL[]9?4YHb@LlW1
+R7
+31
+R30
+R31
+R32
+R11
+R12
+!s100 7l[2_3AX:2nC8d6?ACRS12
+!i10b 1
+Eg55_stack_slot
+Z33 w1487616891
+R20
+R2
+R3
+R4
+Z34 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack_slot.vhd
+Z35 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack_slot.vhd
+l0
+L7
+Ve[2nomUU@<Zz6;aPMWinc2
+R7
+31
+Z36 !s108 1488312464.097392
+Z37 !s90 -reportprogress|300|-93|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack_slot.vhd|
+Z38 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack_slot.vhd|
+R11
+R12
+!s100 1[7U9K4ZXVPdPbV9YEJR?1
+!i10b 1
+Abehav
+R20
+R2
+R3
+DEx4 work 14 g55_stack_slot 0 22 e[2nomUU@<Zz6;aPMWinc2
+l56
+L24
+V?@>W_nU7LUFDAkGWahoGY2
+R7
+31
+R36
+R37
+R38
+R11
+R12
+!s100 Z[XNh8?^SA;zX4eza6IF]3
+!i10b 1
