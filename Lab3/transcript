@@ -1,3 +1,329 @@
 # reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
 # Loading project g55_lab3
-project open {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_lab3}
+# Compile of Lab3.vho was successful.
+# Compile of g55_stack52.vhd was successful.
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_lab3(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+add wave -position end  sim:/g55_lab3/addr
+add wave -position end  sim:/g55_lab3/clk
+add wave -position end  sim:/g55_lab3/data
+add wave -position end  sim:/g55_lab3/empty
+add wave -position end  sim:/g55_lab3/enable
+add wave -position end  sim:/g55_lab3/full
+add wave -position end  sim:/g55_lab3/mode
+add wave -position end  sim:/g55_lab3/num
+add wave -position end  sim:/g55_lab3/rst
+add wave -position end  sim:/g55_lab3/value
+run
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+force -freeze sim:/g55_lab3/clk 1 0, 0 {10000 ps} -r 20ns
+wave create -driver freeze -pattern constant -value 000001 -range 5 0 -starttime 0us -endtime 2us sim:/g55_lab3/addr
+wave create -driver freeze -pattern counter -startvalue 000000 -endvalue 111111 -type Range -direction Up -period 40ns -step 1 -repeat forever -range 5 0 -starttime 0us -endtime 2us sim:/g55_lab3/data
+wave create -driver freeze -pattern constant -value 1 -starttime 0us -endtime 2us sim:/g55_lab3/enable
+wave create -driver freeze -pattern constant -value 0 -starttime 0us -endtime 2us sim:/g55_lab3/rst
+run
+wave create -driver freeze -pattern constant -value 11 -range 1 0 -starttime 0us -endtime 2us sim:/g55_lab3/mode
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+wave create -driver freeze -pattern clock -initialvalue 0 -period 20ns -dutycycle 50 -starttime 0us -endtime 2us sim:/g55_lab3/clk
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+quit -sim
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/wave.do}
+# Compile of g55_stack52.vhd failed with 1 errors.
+# Compile of Lab3.vho was successful.
+# 2 compiles, 1 failed with 1 error. 
+# Compile of g55_stack52.vhd was successful.
+# Compile of Lab3.vho was successful.
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_lab3(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+add wave -position end  sim:/g55_lab3/addr
+add wave -position end  sim:/g55_lab3/clk
+add wave -position end  sim:/g55_lab3/data
+add wave -position end  sim:/g55_lab3/enable
+add wave -position end  sim:/g55_lab3/mode
+add wave -position end  sim:/g55_lab3/rst
+add wave -position end  sim:/g55_lab3/empty
+add wave -position end  sim:/g55_lab3/full
+add wave -position end  sim:/g55_lab3/num
+add wave -position end  sim:/g55_lab3/value
+do wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+# 1
+run
+wave modify -driver freeze -pattern constant -value 000100 -range 5 0 -starttime 0us -endtime 2us Edit:/g55_lab3/addr
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 1us -endtime 2us Edit:/g55_lab3/rst
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+quit -sim
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/wave.do}
+# Compile of g55_stack52.vhd was successful.
+# Compile of Lab3.vho was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_lab3(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+add wave -position end  sim:/g55_lab3/addr
+add wave -position end  sim:/g55_lab3/clk
+add wave -position end  sim:/g55_lab3/data
+add wave -position end  sim:/g55_lab3/enable
+add wave -position end  sim:/g55_lab3/mode
+add wave -position end  sim:/g55_lab3/rst
+add wave -position end  sim:/g55_lab3/empty
+add wave -position end  sim:/g55_lab3/full
+add wave -position end  sim:/g55_lab3/num
+add wave -position end  sim:/g55_lab3/value
+do wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+# 1
+run
+wave modify -driver freeze -pattern constant -value 0 -starttime 0us -endtime 2us Edit:/g55_lab3/rst
+wave modify -driver freeze -pattern constant -value 01 -range 1 0 -starttime 0us -endtime 2us Edit:/g55_lab3/mode
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+wave modify -driver freeze -pattern constant -value 10 -range 1 0 -starttime 100ns -endtime 2000ns Edit:/g55_lab3/mode
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+quit -sim
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/wave.do}
+# Compile of g55_stack52.vhd was successful.
+# Compile of Lab3.vho was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_lab3(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+do wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
+# 1
+# 1
+add wave -position end  sim:/g55_lab3/addr
+add wave -position end  sim:/g55_lab3/clk
+add wave -position end  sim:/g55_lab3/data
+add wave -position end  sim:/g55_lab3/enable
+add wave -position end  sim:/g55_lab3/mode
+add wave -position end  sim:/g55_lab3/rst
+add wave -position end  sim:/g55_lab3/empty
+add wave -position end  sim:/g55_lab3/full
+add wave -position end  sim:/g55_lab3/num
+add wave -position end  sim:/g55_lab3/value
+run
+wave modify -driver freeze -pattern constant -value 11 -range 1 0 -starttime 100ns -endtime 2000ns Edit:/g55_lab3/mode
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+wave modify -driver freeze -pattern constant -value 10 -range 1 0 -starttime 1000ns -endtime 2000ns Edit:/g55_lab3/mode
+wave modify -driver freeze -pattern constant -value 00 -range 1 0 -starttime 1500ns -endtime 2000ns Edit:/g55_lab3/mode
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+wave modify -driver freeze -pattern constant -value 1 -starttime 1800ns -endtime 2000ns Edit:/g55_lab3/rst
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+wave modify -driver freeze -pattern constant -value 0 -starttime 1750ns -endtime 2000ns Edit:/g55_lab3/enable
+run
+wave modify -driver freeze -pattern constant -value 11 -range 1 0 -starttime 1600ns -endtime 2000ns Edit:/g55_lab3/mode
+restart
+# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+run
+wave export -file waveout -starttime 0 -endtime 2000 -format force -designunit g55_lab3
+quit -sim
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/wave.do}

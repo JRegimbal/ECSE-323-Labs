@@ -1,4 +1,26 @@
-{/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd}
+{/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package VITAL_Timing
+-- Loading package VITAL_Primitives
+-- Loading package cycloneii_atom_pack
+-- Loading package cycloneii_components
+-- Compiling entity g55_lab3
+-- Compiling architecture structure of g55_lab3
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package LPM_COMPONENTS
+-- Compiling entity g55_stack52
+-- Compiling architecture behav of g55_stack52
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_pop_enable.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
