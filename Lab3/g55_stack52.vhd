@@ -148,7 +148,7 @@ begin
 	
 	-- counter for num (increment/decrement)
 	C0 : lpm_counter generic map(LPM_WIDTH => 6, LPM_SVALUE => 52, LPM_AVALUE => 0)
-		port map(updown => push, sset => init, aclr => rst, cnt_en => cnt_enHold, clock => clk, q => numHold);
+		port map(updown => push, sset => init and enable, aclr => rst, cnt_en => cnt_enHold, clock => clk, q => numHold);
 	-- Pop_enable circuit from lab2 for setting enable on stack
 	E0 : g55_pop_enable port map(N => addr, clk => clk, P_EN => enableTemp);
 	-- muxer for outputting value of slot at addr

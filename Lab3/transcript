@@ -1,7 +1,8 @@
 # reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
 # Loading project g55_lab3
-vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3
-# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3 
+# Compile of Lab3.vho was successful.
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3_v2
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3_v2 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -9,7 +10,7 @@ vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/model
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.g55_lab3(structure)
+# Loading work.g55_lab3_v2(structure)
 # SDF 10.1d Compiler 2012.11 Nov  2 2012
 # usage: sdfcom [ options ] source-file output-file
 # Options:
@@ -36,37 +37,18 @@ vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/model
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3_v2 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
 do wave.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
 # 1
-# ** Error: invalid command name "wave export -file waveout -starttime 0 -endtime 2000 -format force -designunit g55_lab3"
-# Error in macro ./wave.do line 23
-# invalid command name "wave export -file waveout -starttime 0 -endtime 2000 -format force -designunit g55_lab3"
+# ** Error: Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
+# Error in macro ./wave.do line 12
+# Netname is not editable or not present in the active waveform window
+# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
 #     while executing
-# "{wave export -file waveout -starttime 0 -endtime 2000 -format force -designunit g55_lab3} "
-add wave -position end  sim:/g55_lab3/addr
-add wave -position end  sim:/g55_lab3/clk
-add wave -position end  sim:/g55_lab3/data
-add wave -position end  sim:/g55_lab3/enable
-add wave -position end  sim:/g55_lab3/mode
-add wave -position end  sim:/g55_lab3/rst
-add wave -position end  sim:/g55_lab3/empty
-add wave -position end  sim:/g55_lab3/full
-add wave -position end  sim:/g55_lab3/num
-add wave -position end  sim:/g55_lab3/value
-run
-add wave -position end  sim:/g55_lab3/\U0|S0|U1|dffs\
-add wave -position end  sim:/g55_lab3/\U0|S10|U1|dffs\
-add wave -position end  sim:/g55_lab3/\U0|S11|U1|dffs\
-restart
-# ** Warning: Design size of 1 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
-run
-quit -sim
-wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/wave.do}
+# "wave modify -driver freeze -pattern constant -value 000100 -range 5 0 -starttime 0us -endtime 2us Edit:/g55_lab3/addr "
+add wave -position 0 -format Logic -height 19 -editable 2 NewSig:/g55_lab3/rst
+add wave -position end  sim:/g55_lab3_v2/en

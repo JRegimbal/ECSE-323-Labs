@@ -13,6 +13,7 @@ entity g55_lab3_v2 is
 		segments_floor : out std_logic_vector(6 downto 0);
 		empty : out std_logic;
 		full : out std_logic;
+		--debounceState : out std_logic_vector(2 downto 0);
 		num : out std_logic_vector(5 downto 0)
 	);
 end g55_lab3_v2;
@@ -38,6 +39,7 @@ architecture behav of g55_lab3_v2 is
 			input : in std_logic;
 			output : out std_logic;
 			aclr : in std_logic
+			--stateOut : out std_logic_vector(2 downto 0)
 		);
 	end component;
 	component g55_mod13_v2
@@ -63,10 +65,10 @@ architecture behav of g55_lab3_v2 is
 	
 begin
 	floor13(3) <= '0';
-	DEB : g55_debouncer port map(clock => clk, input => en, output => enable, aclr => rst);
+	DEB : g55_debouncer port map(clock => clk, input => not en, output => enable, aclr => rst); --, stateOut=>debounceState);
 	MOD13 : g55_mod13_v2 port map(A => value, Amod13 => amod13, floor13 => floor13(2 downto 0));
 	SEG_MOD : g55_7_segment_decoder port map(code => amod13, mode => '0', segments_out => segments_mod);
 	SEG_FLOOR : g55_7_segment_decoder port map(code => floor13, mode => '0', segments_out => segments_floor);
-	STACK : g55_stack52 port map (data => data, mode => mode, addr => addr, enable => enable, rst => rst, clk => clk, value => value, empty => empty, full => full, num => num);
+	STACK : g55_stack52 port map (data => data, mode => mode, addr => addr, enable => enable, rst => not rst, clk => clk, value => value, empty => empty, full => full, num => num);
 	
 end architecture;

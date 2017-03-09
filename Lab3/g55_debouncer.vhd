@@ -10,6 +10,7 @@ entity g55_debouncer is -- debounce 40ms (2 000 000 count)
 		aclr : in std_logic;
 		clock : in std_logic; -- 50MHz
 		output : out std_logic
+	--	stateOut : out std_logic_vector(2 downto 0)
 	);
 end g55_debouncer;
 
@@ -42,40 +43,32 @@ architecture behav of g55_debouncer is
 		);
 	end component;
 	
-	signal count : std_logic_vector(20 downto 0);
+	signal count : std_logic_vector(22 downto 0);
 	signal enable : std_logic := '0';
-	signal sigout : std_logic := '0';
+	signal state : std_logic_vector(2 downto 0) := "001";
 	
 begin
-	C0 : lpm_counter generic map (LPM_AVALUE=>0, LPM_DIRECTION=>"UP", LPM_WIDTH=>21)
-		port map(clock=>clock, aclr=>aclr, q=>count, cnt_en=>enable);
-	F0 : lpm_ff generic map (LPM_AVALUE=>0, LPM_FFTYPE=>"DFF", LPM_WIDTH=>1)
-		port map(aclr=>aclr, clock=>clock, sset=>sigout, q(0)=>output);
+	C0 : lpm_counter generic map (LPM_AVALUE=>0, LPM_DIRECTION=>"UP", LPM_WIDTH=>23)
+		port map(clock=>clock, aclr=>state(0), q=>count, cnt_en=>enable);
 
-		STATE : process (count, input, enable)
+		process (clock, aclr)
 		begin
-			case count is
-				when "000000000000000000000" => --either at beginning or end
-					case enable is
-						when '0' =>	-- not counting - at beginning
-							case input is
-								when '1' =>	-- start cycle
-									enable <= '1';
-									sigout <= '1';
-								when others =>	-- do nothing
-									enable <= '0';
-									sigout <= '0';
-							end case;
-						when '1' =>  -- counting - at end
-							enable <= '0';
-							sigout <= '0';
-						when others => null;
-					end case; --enable
-				when "000000000000000000001" => -- stop pulse
-					sigout <= '0';
-				when others => null;
-			end case; --count
-		end process STATE;
-								
+		if (clock'event and clock = '1') then
+			if (state = "001" and input = '1') then
+				state <= "010";
+				enable <= '0';
+			elsif (state = "010") then --only in this for one clock cycle
+				state <= "100";
+				enable <= '1';
+			elsif (state = "100" and count = "11111111111111111111111") then -- counter done
+				state <= "001";
+				enable <= '0';
+			elsif (state /= "001" and state /= "010" and state /= "100") then --prevent stuck state
+				state <= "001";
+			end if;
+		end if;
+		end process;
+		--stateOut <= state;
+		output <= not state(2) and state(1) and not state(0); --only high for state 010
 								
 end architecture;
