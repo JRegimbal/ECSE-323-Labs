@@ -1,3 +1,10 @@
+-- Stack slot - Individual space to be put into a stack
+--
+-- entity name: g55_stack_slot
+-- Copyright (C) 2017 Juliette Regimbal, Qingzhou Yang
+-- Version 1.0
+-- Author: Juliette Regimbal (juliette.regimbal@mail.mcgill.ca), Qingzhou Yang (qingzhou.yang@mail.mcgill.ca)
+-- Date: March 9, 2017
 library ieee;
 library lpm;
 

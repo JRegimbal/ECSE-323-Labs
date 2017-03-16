@@ -1,3 +1,10 @@
+-- Debouncer - takes input from push button and outputs one clock cycle before sleeping. Prevents additional input signals.
+--
+-- entity name: g55_debouncer
+-- Copyright (C) 2017 Juliette Regimbal, Qingzhou Yang
+-- Version 1.0
+-- Author: Juliette Regimbal (juliette.regimbal@mail.mcgill.ca), Qingzhou Yang (qingzhou.yang@mail.mcgill.ca)
+-- Date: March 9, 2017
 library ieee;
 library lpm;
 

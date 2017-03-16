@@ -1,3 +1,10 @@
+-- Testbench for stack - contains stack components and others for programming to FPGA
+--
+-- entity name: g55_lab3_v2
+-- Copyright (C) 2017 Juliette Regimbal, Qingzhou Yang
+-- Version 1.0
+-- Author: Juliette Regimbal (juliette.regimbal@mail.mcgill.ca), Qingzhou Yang (qingzhou.yang@mail.mcgill.ca)
+-- Date: March 9, 2017
 library ieee;
 use ieee.std_logic_1164.all;
 

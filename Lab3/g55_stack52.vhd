@@ -1,3 +1,10 @@
+-- Size 52 stack - contains initialize, pop, and push. pop is from the address in addr, while push is always from 000000.
+--
+-- entity name: g55_stack52
+-- Copyright (C) 2017 Juliette Regimbal, Qingzhou Yang
+-- Version 1.0
+-- Author: Juliette Regimbal (juliette.regimbal@mail.mcgill.ca), Qingzhou Yang (qingzhou.yang@mail.mcgill.ca)
+-- Date: March 9, 2017
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
