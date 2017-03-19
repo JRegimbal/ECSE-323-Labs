@@ -42,26 +42,12 @@ set_global_assignment -name TOP_LEVEL_ENTITY g55_lab3_v2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:49:01  MARCH 09, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name VHDL_FILE ../Lab1/g55_adder.vhd
-set_global_assignment -name VHDL_FILE ../Lab1/g55_adder_single.vhd
-set_global_assignment -name VHDL_FILE ../Lab1/g55_mod13_v2.vhdl
-set_global_assignment -name VHDL_FILE ../Lab2/g55_7_segment_decoder.vhd
-set_global_assignment -name VHDL_FILE g55_stack_slot.vhd
-set_global_assignment -name VHDL_FILE g55_stack52.vhd
-set_global_assignment -name VHDL_FILE g55_pop_enable.vhd
-set_global_assignment -name VHDL_FILE g55_lpm_rom.vhd
-set_global_assignment -name VHDL_FILE g55_lab3_v2.vhd
-set_global_assignment -name VHDL_FILE g55_lab3.vhd
-set_global_assignment -name VHDL_FILE g55_debouncer.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_L1 -to clk
 set_location_assignment PIN_R22 -to rst
@@ -98,7 +84,6 @@ set_location_assignment PIN_F1 -to segments_mod[5]
 set_location_assignment PIN_E2 -to segments_mod[6]
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE g55_stack52_testbed.stp
-set_global_assignment -name SIGNALTAP_FILE g55_stack52_testbed.stp
 set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clk -section_id auto_signaltap_0
@@ -148,5 +133,20 @@ set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -t
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=24" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=54998" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=23335" -section_id auto_signaltap_0
+set_global_assignment -name SIGNALTAP_FILE g55_stack52_testbed.stp
+set_global_assignment -name VHDL_FILE ../Lab1/g55_adder.vhd
+set_global_assignment -name VHDL_FILE ../Lab1/g55_adder_single.vhd
+set_global_assignment -name VHDL_FILE ../Lab1/g55_mod13_v2.vhdl
+set_global_assignment -name VHDL_FILE ../Lab2/g55_7_segment_decoder.vhd
+set_global_assignment -name VHDL_FILE g55_stack_slot.vhd
+set_global_assignment -name VHDL_FILE g55_stack52.vhd
+set_global_assignment -name VHDL_FILE g55_pop_enable.vhd
+set_global_assignment -name VHDL_FILE g55_lpm_rom.vhd
+set_global_assignment -name VHDL_FILE g55_lab3_v2.vhd
+set_global_assignment -name VHDL_FILE g55_lab3.vhd
+set_global_assignment -name VHDL_FILE g55_debouncer.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SLD_FILE "/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3/g55_stack52_testbed_auto_stripped.stp"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
