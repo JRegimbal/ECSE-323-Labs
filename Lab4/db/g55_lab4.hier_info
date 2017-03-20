@@ -1,0 +1,1392 @@
+|g55_rules
+play_pile_top_card[0] => g55_mod13_v2:DEC1.A[0]
+play_pile_top_card[1] => g55_mod13_v2:DEC1.A[1]
+play_pile_top_card[2] => g55_mod13_v2:DEC1.A[2]
+play_pile_top_card[3] => g55_mod13_v2:DEC1.A[3]
+play_pile_top_card[4] => g55_mod13_v2:DEC1.A[4]
+play_pile_top_card[5] => g55_mod13_v2:DEC1.A[5]
+card_to_play[0] => g55_mod13_v2:DEC2.A[0]
+card_to_play[1] => g55_mod13_v2:DEC2.A[1]
+card_to_play[2] => g55_mod13_v2:DEC2.A[2]
+card_to_play[3] => g55_mod13_v2:DEC2.A[3]
+card_to_play[4] => g55_mod13_v2:DEC2.A[4]
+card_to_play[5] => g55_mod13_v2:DEC2.A[5]
+legal_play <= legal_play.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1
+A[0] => g55_adder:A1.A[0]
+A[0] => g55_adder:A1.B[2]
+A[0] => g55_adder:A5.B[0]
+A[1] => g55_adder:A1.A[1]
+A[1] => g55_adder:A1.B[3]
+A[1] => g55_adder:A5.B[1]
+A[2] => g55_adder:A1.A[2]
+A[2] => g55_adder:A1.B[4]
+A[2] => g55_adder:A5.B[2]
+A[3] => g55_adder:A1.A[3]
+A[3] => g55_adder:A1.B[5]
+A[3] => g55_adder:A5.B[3]
+A[4] => g55_adder:A1.A[4]
+A[4] => g55_adder:A1.B[6]
+A[4] => g55_adder:A5.B[4]
+A[5] => g55_adder:A1.A[5]
+A[5] => g55_adder:A1.B[7]
+A[5] => g55_adder:A5.B[5]
+Amod13[0] <= g55_adder:A5.Sum[0]
+Amod13[1] <= g55_adder:A5.Sum[1]
+Amod13[2] <= g55_adder:A5.Sum[2]
+Amod13[3] <= g55_adder:A5.Sum[3]
+floor13[0] <= g55_adder:A1.Sum[6]
+floor13[1] <= g55_adder:A1.Sum[7]
+floor13[2] <= g55_adder:A1.Sum[8]
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A1|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A2|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A3|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A4|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC1|g55_adder:A5|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2
+A[0] => g55_adder:A1.A[0]
+A[0] => g55_adder:A1.B[2]
+A[0] => g55_adder:A5.B[0]
+A[1] => g55_adder:A1.A[1]
+A[1] => g55_adder:A1.B[3]
+A[1] => g55_adder:A5.B[1]
+A[2] => g55_adder:A1.A[2]
+A[2] => g55_adder:A1.B[4]
+A[2] => g55_adder:A5.B[2]
+A[3] => g55_adder:A1.A[3]
+A[3] => g55_adder:A1.B[5]
+A[3] => g55_adder:A5.B[3]
+A[4] => g55_adder:A1.A[4]
+A[4] => g55_adder:A1.B[6]
+A[4] => g55_adder:A5.B[4]
+A[5] => g55_adder:A1.A[5]
+A[5] => g55_adder:A1.B[7]
+A[5] => g55_adder:A5.B[5]
+Amod13[0] <= g55_adder:A5.Sum[0]
+Amod13[1] <= g55_adder:A5.Sum[1]
+Amod13[2] <= g55_adder:A5.Sum[2]
+Amod13[3] <= g55_adder:A5.Sum[3]
+floor13[0] <= g55_adder:A1.Sum[6]
+floor13[1] <= g55_adder:A1.Sum[7]
+floor13[2] <= g55_adder:A1.Sum[8]
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A1|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A2|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A3|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A4|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5
+A[0] => g55_adder_single:b2v_inst.A
+A[1] => g55_adder_single:b2v_inst1.A
+A[2] => g55_adder_single:b2v_inst2.A
+A[3] => g55_adder_single:b2v_inst3.A
+A[4] => g55_adder_single:b2v_inst4.A
+A[5] => g55_adder_single:b2v_inst5.A
+A[6] => g55_adder_single:b2v_inst6.A
+A[7] => g55_adder_single:b2v_inst7.A
+B[0] => g55_adder_single:b2v_inst.B
+B[1] => g55_adder_single:b2v_inst1.B
+B[2] => g55_adder_single:b2v_inst2.B
+B[3] => g55_adder_single:b2v_inst3.B
+B[4] => g55_adder_single:b2v_inst4.B
+B[5] => g55_adder_single:b2v_inst5.B
+B[6] => g55_adder_single:b2v_inst6.B
+B[7] => g55_adder_single:b2v_inst7.B
+Sum[0] <= g55_adder_single:b2v_inst.S
+Sum[1] <= g55_adder_single:b2v_inst1.S
+Sum[2] <= g55_adder_single:b2v_inst2.S
+Sum[3] <= g55_adder_single:b2v_inst3.S
+Sum[4] <= g55_adder_single:b2v_inst4.S
+Sum[5] <= g55_adder_single:b2v_inst5.S
+Sum[6] <= g55_adder_single:b2v_inst6.S
+Sum[7] <= g55_adder_single:b2v_inst7.S
+Sum[8] <= g55_adder_single:b2v_inst7.Cout
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst1
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst2
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst3
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst4
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst5
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst6
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g55_rules|g55_mod13_v2:DEC2|g55_adder:A5|g55_adder_single:b2v_inst7
+A => SYNTHESIZED_WIRE_0.IN0
+A => SYNTHESIZED_WIRE_2.IN1
+B => SYNTHESIZED_WIRE_0.IN1
+B => SYNTHESIZED_WIRE_3.IN0
+B => SYNTHESIZED_WIRE_1.IN0
+Cin => SYNTHESIZED_WIRE_3.IN1
+Cin => SYNTHESIZED_WIRE_1.IN1
+Cin => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
