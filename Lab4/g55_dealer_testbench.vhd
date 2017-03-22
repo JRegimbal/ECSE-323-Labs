@@ -14,8 +14,9 @@ entity g55_dealer_testbench is
 		clock : in std_logic;
 		reset : in std_logic;
 		raw_deal : in std_logic;
-		stack_mode : out std_logic_vector(1 downto 0);
-		segments_out : out std_logic_vector(6 downto 0)
+		stack_mode : in std_logic_vector(1 downto 0);
+		segments_out_num : out std_logic_vector(6 downto 0);
+		segments_out_suit : out std_logic_vector(6 downto 0)
 	);
 end g55_dealer_testbench;
 
@@ -101,18 +102,20 @@ architecture behav of g55_dealer_testbench is
 	signal rand_enable : std_logic;
 	signal request_deal : std_logic;
 	signal stack_num : std_logic_vector(5 downto 0);
-	signal stored_rand : std_logic_vector(5 downto 0);
-	signal temp_rand : std_logic_vector(5 downto 0);
+	signal stored_rand : std_logic_vector(31 downto 0);
+	signal temp_rand : std_logic_vector(31 downto 0);
 	signal card_raw : std_logic_vector(5 downto 0);
-	signal card_number : std_logic_vector(3 downto 0)
+	signal card_number : std_logic_vector(3 downto 0);
 	signal card_suit : std_logic_vector(2 downto 0);
 	
 begin	
 	dealer : g55_dealer port map (clock=>clock, reset=>reset, rand_lt_num=>randcomp, stack_enable=>stack_enable, rand_enable=>rand_enable, request_deal=>request_deal);
-	comp : g55_comp6 port map (A=>stack_num, B=>stored_rand, AeqB=>randcomp);
-	reg : g55_register port map (clock=>clock, register_enable=>rand_enable, next_value=>temp_rand, register_value=>stored_rand) generic map (WIDTH=>6);
-	seg : g55_7_segment_decoder port map(code=>card_number, mode=>'0', segments_out=>segments_out);
-	randu : g55_randu port map(seed=>, rand=>temp_rand);
-	stack : g55_stack52 port map (clk=>clock, mode=>stack_mode, addr=>stored_rand, enable=>stack_enable, num=>stack_num, value=>card_raw, rst=>reset, data=>"000000");
+	comp : g55_comp6 port map (A=>stack_num, B=>stored_rand(31 downto 26), AeqB=>randcomp);
+	reg : g55_register generic map (WIDTH=>32) port map (clock=>clock, register_enable=>rand_enable, next_value=>temp_rand, register_value=>stored_rand);
+	segnum : g55_7_segment_decoder port map(code=>card_number, mode=>'0', segments_out=>segments_out_num);
+	segsuit : g55_7_segment_decoder port map(code=>'0'&card_suit, mode=>'0', segments_out=>segments_out_suit);
+	randu : g55_randu port map(seed=>stored_rand, rand=>temp_rand);
+	stack : g55_stack52 port map (clk=>clock, mode=>stack_mode, addr=>stored_rand(31 downto 26), enable=>stack_enable, num=>stack_num, value=>card_raw, rst=>reset, data=>"000000");
 	deal_debounce : g55_debouncer port map (input=>not raw_deal, clock=>clock, aclr=>reset, output=>request_deal);
 	modulo : g55_mod13_v2 port map (A=>card_raw, Amod13=>card_number, floor13=>card_suit);
+end architecture;
