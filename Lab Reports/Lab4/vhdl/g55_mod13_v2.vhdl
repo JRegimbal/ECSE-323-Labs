@@ -1,0 +1,64 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+LIBRARY work;
+
+ENTITY g55_mod13_v2 IS
+	PORT
+	(
+		A : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+		Amod13 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		floor13 : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+	);
+END g55_mod13_v2;
+
+ARCHITECTURE bdf_type OF g55_mod13_v2 IS
+
+COMPONENT g55_adder
+	PORT(
+		A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+		Sum : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+	);
+END COMPONENT;
+
+SIGNAL ByteA : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL AshiftTwo : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL FloorShiftTwo : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL FloorShiftThree : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL TempMult : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL Mult5 : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL Floor : STD_LOGIC_VECTOR(2 DOWNTO 0);
+SIGNAL MULT13 : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL ConstOne : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL Ones : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL Twos : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL Result : STD_LOGIC_VECTOR(8 DOWNTO 0);
+SIGNAL FloorPad : STD_LOGIC_VECTOR(7 DOWNTO 0);
+
+BEGIN
+
+FloorPad <= "00000" & Floor;
+ConstOne <= STD_LOGIC_VECTOR(TO_UNSIGNED(1, 8));
+ByteA <= "0" & "0" & A(5 DOWNTO 0);
+AshiftTwo(7 DOWNTO 2) <= A(5 DOWNTO 0);
+AshiftTwo(1 DOWNTO 0) <= '0' & '0';
+FloorShiftThree(5 DOWNTO 3) <= Floor(2 DOWNTO 0);
+FloorShiftThree(7) <= '0';
+FloorShiftThree(2 downto 0) <= '0' & '0' & '0';
+FloorShiftTwo(4 DOWNTO 2) <= Floor(2 DOWNTO 0);
+FloorShiftTwo(7 DOWNTO 5) <= '0'&'0'&'0';
+FloorShiftTwo(1 DOWNTO 0) <= '0'&'0';
+Floor(2 DOWNTO 0) <= Mult5(8 DOWNTO 6);
+floor13 <= Floor;
+Ones <= NOT Mult13(7 DOWNTO 0);
+Amod13 <= Result(3 DOWNTO 0);
+
+A1 : g55_adder PORT MAP (A => ByteA, B => AshiftTwo, Sum => Mult5);
+A2 : g55_adder PORT MAP (A => FloorShiftTwo, B => FloorShiftThree, Sum => TempMult);
+A3 : g55_adder PORT MAP (A => TempMult(7 DOWNTO 0), B => FloorPad, Sum => Mult13);
+A4 : g55_adder PORT MAP (A => Ones, B => ConstOne, Sum => Twos);
+A5 : g55_adder PORT MAP (A => Twos(7 DOWNTO 0), B => ByteA, Sum => Result);
+
+END bdf_type;

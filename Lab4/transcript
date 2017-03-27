@@ -1,0 +1,46 @@
+# reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
+# Loading project g55_lab4
+# Compile of g55_lab4.vho was successful.
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4_vhd.sdo} work.g55_dealer
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4_vhd.sdo} work.g55_dealer 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_dealer(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_dealer File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
+do wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# 0
+add wave -position end  sim:/g55_dealer/state
+run
+add wave -position end  sim:/g55_dealer/rand_enable
+add wave -position end  sim:/g55_dealer/stack_enable
+restart
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_dealer File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
+run
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/wave.do}

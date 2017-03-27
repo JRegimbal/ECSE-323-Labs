@@ -1,0 +1,91 @@
+m255
+K3
+13
+cModel Technology
+d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab3
+Eg55_dealer
+Z0 w1490617944
+Z1 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z2 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z3 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z7 d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4
+Z8 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
+Z9 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
+l0
+L34
+VDgh4hWAEKKzQK[38Ko0Bi2
+!s100 1?oZD6lVE6mKUGH?IEo3=2
+Z10 OV;C;10.1d;51
+32
+!i10b 1
+Z11 !s108 1490618106.979015
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho|
+Z13 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho|
+Z14 o-work work -2002 -explicit -O0
+Z15 tExplicit 1
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+Z16 DEx4 work 10 g55_dealer 0 22 Dgh4hWAEKKzQK[38Ko0Bi2
+l84
+L54
+Vf2VGB4e3@b7K;_bfM`BIF1
+!s100 1`V8I4U]W7PP<z<P9FQZ[3
+R10
+32
+!i10b 1
+R11
+R12
+R13
+R14
+R15
+Eg55_rules
+Z17 w1490551435
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+l0
+L34
+VGkm[occ:K2[2@D9<CQ:3X3
+R10
+32
+Z18 !s108 1490551528.515186
+R12
+Z19 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho|
+R14
+R15
+!s100 QLG>ElV`XRZohQSa_9ngl2
+!i10b 1
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 9 g55_rules 0 22 Gkm[occ:K2[2@D9<CQ:3X3
+l114
+L58
+V@=EnQY[Ol8hXG[l<6]z]O2
+R10
+32
+R18
+R12
+R19
+R14
+R15
+!s100 5kKbUMg==f<a_Ze8BzkTD3
+!i10b 1

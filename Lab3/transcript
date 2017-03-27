@@ -1,8 +1,10 @@
 # reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
 # Loading project g55_lab3
-# Compile of Lab3.vho was successful.
-vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3_v2
-# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3_vhd.sdo} work.g55_lab3_v2 
+# reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
+# Loading project g55_lab4
+# Compile of g55_lab4.vho was successful.
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4_vhd.sdo} work.g55_rules
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4_vhd.sdo} work.g55_rules 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -10,7 +12,7 @@ vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/model
 # Loading ieee.vital_primitives(body)
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
-# Loading work.g55_lab3_v2(structure)
+# Loading work.g55_rules(structure)
 # SDF 10.1d Compiler 2012.11 Nov  2 2012
 # usage: sdfcom [ options ] source-file output-file
 # Options:
@@ -20,35 +22,79 @@ vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/model
 #   -delayscale <val>   Scale delays by the specified value
 #   -nocompress         Don't compress the resulting output file
 #   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
 # Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
 # Loading cycloneii.cycloneii_dffe(behave)
 # Loading cycloneii.cycloneii_asynch_io(behave)
-# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
-# Loading cycloneii.cycloneii_ena_reg(behave)
-# Loading cycloneii.cycloneii_ram_block(block_arch)
-# Loading cycloneii.cycloneii_ram_register(reg_arch)
-# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim Altera version. Expect performance to be adversely affected.
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /g55_lab3_v2 File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/simulation/modelsim/Lab3.vho
+#    Time: 0 ps  Iteration: 0  Instance: /g55_rules File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
+add wave -position end  sim:/g55_rules/card_to_play
+add wave -position end  sim:/g55_rules/play_pile_top_card
+add wave -position end  sim:/g55_rules/legal_play
+wave create -driver freeze -pattern constant -value 010100 -range 5 0 -starttime 0ns -endtime 30ns sim:/g55_rules/card_to_play
+wave create -driver freeze -pattern constant -value 000000 -range 5 0 -starttime 0ns -endtime 300ns sim:/g55_rules/play_pile_top_card
+wave create -driver freeze -pattern constant -value 010011 -range 5 0 -starttime 30ns -endtime 60ns sim:/g55_rules/card_to_play
+# /g55_rules/card_to_play already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave modify -driver freeze -pattern constant -value 010011 -range 5 0 -starttime 30ns -endtime 60ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 60ns -endtime 90ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001100 -range 5 0 -starttime 60ns -endtime 90ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 60ns -endtime 90ns Edit:/g55_rules/play_pile_top_card
+wave modify -driver freeze -pattern constant -value 000000 -range 5 0 -starttime 60ns -endtime 90ns Edit:/g55_rules/play_pile_top_card
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 90ns -endtime 120ns Edit:/g55_rules/play_pile_top_card
+wave modify -driver freeze -pattern constant -value 001100 -range 5 0 -starttime 60ns -endtime 120ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 120ns -endtime 150ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 120ns -endtime 180ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001110 -range 5 0 -starttime 120ns -endtime 150ns Edit:/g55_rules/play_pile_top_card
+wave modify -driver freeze -pattern constant -value 100001 -range 5 0 -starttime 180ns -endtime 210ns Edit:/g55_rules/play_pile_top_card
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 180ns -endtime 210ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 210ns -endtime 240ns Edit:/g55_rules/card_to_play
+run
+quit -sim
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/wave.do}
+# Compile of g55_lab4.vho was successful.
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4_vhd.sdo} work.g55_rules
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4_vhd.sdo} work.g55_rules 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_rules(structure)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_rules File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
 do wave.do
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
 # 1
-# ** Error: Netname is not editable or not present in the active waveform window
-# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
-# Error in macro ./wave.do line 12
-# Netname is not editable or not present in the active waveform window
-# Usage: wave modify -driver <freeze|deposit|drive|expectedOutput> -pattern constant -value <value> [-range <msb lsb>] -starttime <Time> -endtime <Time> netName
-#     while executing
-# "wave modify -driver freeze -pattern constant -value 000100 -range 5 0 -starttime 0us -endtime 2us Edit:/g55_lab3/addr "
-add wave -position 0 -format Logic -height 19 -editable 2 NewSig:/g55_lab3/rst
-add wave -position end  sim:/g55_lab3_v2/en
+add wave -position end  sim:/g55_rules/legal_play
+run
+wave modify -driver freeze -pattern constant -value 001110 -range 5 0 -starttime 120ns -endtime 150ns Edit:/g55_rules/card_to_play
+wave modify -driver freeze -pattern constant -value 000001 -range 5 0 -starttime 150ns -endtime 180ns Edit:/g55_rules/play_pile_top_card
+wave modify -driver freeze -pattern constant -value 001101 -range 5 0 -starttime 120ns -endtime 150ns Edit:/g55_rules/card_to_play
+restart
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_rules File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/simulation/modelsim/g55_lab4.vho
+run
+wave editwrite -file {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab4/wave.do}
