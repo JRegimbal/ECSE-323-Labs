@@ -22,14 +22,7 @@ entity g55_computer_player is
 end g55_computer_player;
 
 architecture behav of g55_computer_player is
-	component g55_rules
-	end component;
-	
-	component g55_stack52
-	end component;
-	
-	component g55_adder;
-	end component;
+
 	signal current_card : std_logic_vector(5 downto 0);
 	signal legal_move : std_logic;
 	signal stack_num : std_logic_vector(5 downto 0);
@@ -57,7 +50,7 @@ begin
 						state := "0100";
 						card_num := 0;
 						play_card_value := current_card;
-					elsif (legal_move = '0' and to_unsigned(card_num+1, 6) = stack_num) then -- illegal, out of cards
+					elsif (legal_move = '0' and std_logic_vector(to_unsigned(card_num+1, 6)) = stack_num) then -- illegal, out of cards
 						state := "1000";
 						card_num := 0;
 					elsif (legal_move = '0') then --illegal move, more cards available
