@@ -2,9 +2,10 @@
 --
 -- entity name: g55_computer_player
 -- Copyright (C) 2017 Juliette Regimbal, Qingzhou Yang
--- Version 1.0
+-- Version 2.0
 -- Author: Juliette Regimbal (juliette.regimbal@mail.mcgill.ca), Qingzhou Yang (qingzhou.yang@mail.mcgill.ca)
--- Date: March 27, 2017
+-- Date: March 30, 2017
+
 library ieee;
 library g55;
 use ieee.std_logic_1164.all;
@@ -12,91 +13,80 @@ use ieee.numeric_std.all;
 
 entity g55_computer_player is
 	port(
+		clock : in std_logic;
 		turn : in std_logic;
 		reset : in std_logic;
-		clock : in std_logic;
+		card_received : in std_logic;
 		top_card : in std_logic_vector(5 downto 0);
 		card_in : in std_logic_vector(5 downto 0);
 		card_out : out std_logic_vector(5 downto 0);
-		num_cards: out std_logic_vector(5 downto 0);
+		done : out std_logic;
 		request_card : out std_logic;
-		done : out std_logic
+		num_cards : out std_logic_vector(5 downto 0)
 	);
 end g55_computer_player;
 
-architecture behav of g55_computer_player is	
-	signal current_card : std_logic_vector(5 downto 0);
-	signal card_addr : std_logic_vector(5 downto 0);
+architecture behav of g55_computer_player is
+	signal cards_in_hand : std_logic_vector(5 downto 0);
 	signal legal_move : std_logic;
-	signal stack_num : std_logic_vector(5 downto 0);
-	signal stack_mode : std_logic_vector(1 downto 0) := "00"; --initialize to NOP
+	signal card_selected : std_logic_vector(5 downto 0);
 	signal stack_en : std_logic := '0';
-	signal last_card_input : std_logic_vector(5 downto 0);
-	signal input_change : std_logic;
+	signal stack_mode : std_logic_vector(1 downto 0) := "00";
+	signal num_selected : std_logic_vector(5 downto 0) := "000000";
 	
-begin
 
-	stack : g55.g55_stack52 port map(clk=>clock, rst=>reset, mode=>stack_mode, data=>card_in,
-		addr=>card_addr, value=>current_card, num=>stack_num, enable=>stack_en);
-	rules : g55.g55_rules port map(play_pile_top_card=>top_card, card_to_play=>current_card, legal_play=>legal_move);
+begin
+	stack : entity g55.g55_stack52
+		port map (clk=>clock, rst=>reset, mode=>stack_mode, data=>card_in, addr=>num_selected, value=>card_selected, num=>cards_in_hand, enable=>stack_en);
+	rules : entity g55.g55_rules port map (play_pile_top_card=>top_card, card_to_play=>card_selected, legal_play=>legal_move);
 	
-	input_change <= '0' when (last_card_input xor card_in) = ("000000") else '1';
-	num_cards <= stack_num;
+	num_cards <= cards_in_hand;
 	
-	process (clock, reset, input_change)
-	variable state : std_logic_vector(4 downto 0) := "00001";
-	variable card_num : integer := 0;
-	variable play_card_value : std_logic_vector(5 downto 0);
+	process (clock, reset)
+	variable state : std_logic_vector(2 downto 0) := "000";
 	begin
-		if (reset = '1') then --asynchronous reset
-			state := "00001";
-		elsif clock'event and clock = '1' then
-			last_card_input <= card_in;
+		if (reset = '1') then --async reset
+			state := "000";
+		elsif (clock = '1') then --FSM
 			case state is
-				when "00001" => -- wait state
-					request_card <= '0';
-					card_num := 0;
-					done <= '1';
-					stack_mode <= "00";
+				when "000" => -- first wait state (turn high)
 					stack_en <= '0';
-					if (turn = '1') then --computer turn
-						state := "00010";
-					end if;
-				when "00010" => --scan state
-					card_out <= "000000";
+					stack_mode <= "00";
 					request_card <= '0';
-					done <= '0';
-					card_addr <= std_logic_vector(to_unsigned(card_num, 6));
-					if (legal_move = '1') then	--card is legal to play
-						state := "00100";
-						card_num := 0;
-						play_card_value := current_card;
-					elsif (legal_move = '0' and to_unsigned(card_num+1, 6) >= unsigned(stack_num)) then -- illegal, out of cards
-						state := "01000";
-						card_num := 0;
-					elsif (legal_move = '0') then --illegal move, more cards available
-						card_num := card_num + 1;
+					done <= '1';
+					if (turn = '0') then
+						state := "001";
 					end if;
-				when "01000" => --get new card
-					card_out <= "000000";
-					request_card <= '1';
-					done <= '0';
-					if (input_change = '1') then
-						state := "10000";
-					end if;
-				when "00100" => --play card
-					card_out <= play_card_value;
+				when "001" => -- second wait state (turn low)
 					request_card <= '0';
-					done <= '0';
-					stack_en <= '1';
+					done <= '1';
+					num_selected <= "000000";
+					if (turn = '1') then -- computer's turn signaled
+						state := "011";
+					end if;
+				when "011" => -- computer's turn begins, scan cards
+					if (legal_move = '1') then --card in hand can be played
+						state := "010";
+					elsif (legal_move = '0' and unsigned(num_selected) < unsigned(cards_in_hand)) then -- try next card
+						num_selected <= std_logic_vector(unsigned(num_selected) + 1);
+					else -- out of cards, draw from deck
+						state := "111";
+					end if;
+				when "010" => -- play the card
+					card_out <= card_selected;
 					stack_mode <= "10"; --POP
-					state := "00001"; --end turn
-				when "10000"=> --push
-					request_card <= '0';
 					stack_en <= '1';
-					stack_mode <= "11"; --push
-					state := "00001"; --end turn
-				when others => state := "00001"; --return to wait in case of an error
+					state := "000"; -- end the turn
+				when "111" => -- request another card
+					request_card <= '1';
+					if (card_received = '1') then 
+						state := "101";
+					end if;
+				when "101" => -- add card to hand
+					stack_mode <= "11"; --PUSH
+					stack_en <= '1';
+					state := "000"; -- end turn
+				when others => state := "000";
 			end case;
 		end if;
 	end process;

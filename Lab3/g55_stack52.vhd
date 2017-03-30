@@ -47,36 +47,6 @@ architecture behav of g55_stack52 is
 		);
 	end component;
 	
-	component lpm_ff
-	generic (
-		LPM_AVALUE : integer;
-		LPM_FFTYPE : string;
-		LPM_SVALUE : integer;
-		LPM_WIDTH : integer
-	);
-	port (
-		sset : in std_logic;
-		data : in std_logic_vector(LPM_WIDTH-1 downto 0);
-		clock : in std_logic;
-		enable : in std_logic;
-		aclr : in std_logic;
-		q : out std_logic_vector(LPM_WIDTH-1 downto 0)
-	);
-	end component;
-	component lpm_mux
-		--type marray is array (LPM_SIZE-1 downto 0) of std_logic_vector(LPM_WIDTH-1 downto 0);
-		generic(
-			LPM_SIZE : integer;
-			LPM_WIDTH : integer;
-			LPM_WIDTHS : integer;
-			LPM_PIPELINE : integer);
-		port(
-			data : in multi;
-			sel : in std_logic_vector(LPM_WIDTHS-1 downto 0);
-			result : out std_logic_vector(LPM_WIDTH-1 downto 0)
-		);
-	end component;
-	
 	component g55_pop_enable
 		port(
 			N : in std_logic_vector(5 downto 0);
@@ -88,8 +58,7 @@ architecture behav of g55_stack52 is
 	component lpm_counter
 		generic(
 			LPM_WIDTH : integer;
-			LPM_SVALUE : integer;
-			LPM_AVALUE : integer
+			LPM_SVALUE : string
 		);
 		port(
 			sset : in std_logic;
@@ -98,6 +67,20 @@ architecture behav of g55_stack52 is
 			clock : in std_logic;
 			aclr : in std_logic;
 			q : out std_logic_vector(LPM_WIDTH-1 downto 0)
+		);
+	end component;
+	
+	component lpm_mux
+		generic(
+			LPM_WIDTH : integer;
+			LPM_WIDTHS : integer;
+			LPM_SIZE : integer;
+			LPM_PIPELINE : integer
+		);
+		port(
+			data : in multi;
+			sel : in std_logic_vector(LPM_WIDTHS-1 downto 0);
+			result : out std_logic_vector(LPM_WIDTH-1 downto 0)
 		);
 	end component;
 	
@@ -111,6 +94,7 @@ architecture behav of g55_stack52 is
 	signal numHold : std_logic_vector(5 downto 0) := "000000";
 	signal enableNum : std_logic := '0';
 	signal cnt_enHold : std_logic;
+	signal counter_sset : std_logic;
 	
 	
 	
@@ -119,7 +103,7 @@ begin
 	init <= not mode(1) and mode(0);
 	pop <= mode(1) and not mode(0);
 	push <= mode(1) and mode(0);
-	
+	counter_sset <= init and enable;
 	num <= numHold;
 	
 	cnt_enHold <= enableNum and not (push and full) and not (pop and empty);
@@ -154,8 +138,8 @@ begin
 	end process;
 	
 	-- counter for num (increment/decrement)
-	C0 : lpm_counter generic map(LPM_WIDTH => 6, LPM_SVALUE => 52, LPM_AVALUE => 0)
-		port map(updown => push, sset => init and enable, aclr => rst, cnt_en => cnt_enHold, clock => clk, q => numHold);
+	C0 : lpm_counter generic map(LPM_WIDTH => 6, LPM_SVALUE => "52")
+		port map(updown => push, sset => counter_sset, aclr => rst, cnt_en => cnt_enHold, clock => clk, q => numHold);
 	-- Pop_enable circuit from lab2 for setting enable on stack
 	E0 : g55_pop_enable port map(N => addr, clk => clk, P_EN => enableTemp);
 	-- muxer for outputting value of slot at addr

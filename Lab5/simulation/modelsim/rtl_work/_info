@@ -1,0 +1,80 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim
+Eg55_computer_player
+Z1 w1490901280
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim
+Z6 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player.vhd
+Z7 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player.vhd
+l0
+L13
+VQfzc=OP6A4GbBlkT:?8DP2
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1490907264.628378
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player.vhd|
+Z11 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 HAEJoZDP]R7CdGUKh1c^H2
+!i10b 1
+Abehav
+DEx3 g55 9 g55_rules 0 22 lTiOj=9Clh0Q@LA7ioo^D0
+DPx3 lpm 14 lpm_components 0 22 aHRA3clF>2DcWDhgFTAbM3
+DEx3 g55 11 g55_stack52 0 22 477be[O]nJ?:5GHI@0S8E0
+R2
+R3
+R4
+DEx4 work 19 g55_computer_player 0 22 Qfzc=OP6A4GbBlkT:?8DP2
+l37
+L27
+VQ;K=h8A9H50aKF>jM:mPM2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 9B3_T9ATZU?j9^NYiYBRK2
+!i10b 1
+Eg55_computer_player_test
+Z14 w1490898656
+R3
+R4
+R5
+Z15 8/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd
+Z16 F/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd
+l0
+L11
+V4i:=Hm1OWaf=Nji[3WbZM2
+!s100 hBSSJ>K[Gj<I33lkT`gDh2
+R8
+32
+!i10b 1
+Z17 !s108 1490907330.025888
+Z18 !s90 -reportprogress|300|-work|work|/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd|
+Z19 !s107 /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd|
+Z20 o-work work -O0
+R13
+Abehav
+R3
+R4
+DEx4 work 24 g55_computer_player_test 0 22 4i:=Hm1OWaf=Nji[3WbZM2
+l35
+L14
+V9b]UZ@AWX9IkVgBZ_kPHe1
+!s100 b?cMjYMF9ZcelVPnH``132
+R8
+32
+!i10b 1
+R17
+R18
+R19
+R20
+R13

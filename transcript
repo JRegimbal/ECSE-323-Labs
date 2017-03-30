@@ -1,0 +1,189 @@
+# reading /home/juliette/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini
+# Loading project g55
+# Compile of g55_lab5.vho was successful.
+# Compile of g55_computer_player_test.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo} work.g55_computer_player_test
+# vsim -sdftyp {/=/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo} work.g55_computer_player_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.g55_computer_player_test(behav)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# usage: sdfcom [ options ] source-file output-file
+# Options:
+#   -mindelays          Use minimum timing from min:typ:max expressions
+#   -typdelays          Use typical timing from min:typ:max expressions (default)
+#   -maxdelays          Use maximum timing from min:typ:max expressions
+#   -delayscale <val>   Scale delays by the specified value
+#   -nocompress         Don't compress the resulting output file
+#   -suppress <msg(s)>  Suppress comma-separed list of error/warning messages
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_computer_player(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Error: (vsim-SDF-3250) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo(35): Failed to find INSTANCE '/g55_computer_player_test/\stack|S49|U1|dffs[4]\'.
+# ** Error: (vsim-SDF-3250) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo(57): Failed to find INSTANCE '/g55_computer_player_test/\stack|S22|U1|dffs[4]\'.
+# ** Error: (vsim-SDF-3250) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo(79): Failed to find INSTANCE '/g55_computer_player_test/\stack|S21|U1|dffs[4]\'.
+# ** Error: (vsim-SDF-3250) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo(101): Failed to find INSTANCE '/g55_computer_player_test/\stack|S20|U1|dffs[4]\'.
+# ** Error: (vsim-SDF-3250) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo(123): Failed to find INSTANCE '/g55_computer_player_test/\stack|S23|U1|dffs[4]\'.
+# ** Warning: (vsim-SDF-3432) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo: This file is probably applied to the wrong instance.
+# Ignoring subsequent missing instances from this file.
+# ** Warning: (vsim-SDF-3440) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo: Failed to find any of the 1432 instances from this file.
+# ** Warning: (vsim-SDF-3442) /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5_vhd.sdo: Try instance '/g55_computer_player_test/CPM'. It contains all instance paths from this file.
+# Error loading design
+vsim work.g55_computer_player_test
+# vsim work.g55_computer_player_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.g55_computer_player_test(behav)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_computer_player(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run
+# ** Error: Failed to stay in scan state
+#    Time: 35 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to recognize need to draw a card
+#    Time: 85 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to draw a card
+#    Time: 85 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to play a card
+#    Time: 205 ns  Iteration: 13  Instance: /g55_computer_player_test
+add wave -position end  sim:/g55_computer_player_test/CPM/state
+restart
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run
+# ** Error: Failed to stay in scan state
+#    Time: 35 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to recognize need to draw a card
+#    Time: 85 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to draw a card
+#    Time: 85 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to play a card
+#    Time: 205 ns  Iteration: 13  Instance: /g55_computer_player_test
+quit -sim
+# Compile of g55_computer_player_test.vhd was successful.
+vsim work.g55_computer_player_test
+# vsim work.g55_computer_player_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.g55_computer_player_test(behav)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_computer_player(structure)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run
+# ** Error: Failed to recognize need to draw a card
+#    Time: 95 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to draw a card
+#    Time: 95 ns  Iteration: 0  Instance: /g55_computer_player_test
+restart
+add wave -position end  sim:/g55_computer_player_test/card_in
+add wave -position end  sim:/g55_computer_player_test/card_out
+add wave -position end  sim:/g55_computer_player_test/done
+add wave -position end  sim:/g55_computer_player_test/num_cards
+add wave -position end  sim:/g55_computer_player_test/request_card
+add wave -position end  sim:/g55_computer_player_test/turn
+run
+# ** Error: Failed to play a card
+#    Time: 215 ns  Iteration: 13  Instance: /g55_computer_player_test
+restart
+# ** Warning: Design size of 2 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+run
+# ** Error: Failed to recognize need to draw a card
+#    Time: 95 ns  Iteration: 0  Instance: /g55_computer_player_test
+# ** Error: Failed to draw a card
+#    Time: 95 ns  Iteration: 0  Instance: /g55_computer_player_test
+quit -sim
+# Compile of g55_lab5.vho was successful.
+# Compile of g55_computer_player_test.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim work.g55_computer_player_test
+# vsim work.g55_computer_player_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.g55_computer_player_test(behav)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.g55_computer_player(structure)
+# ** Failure: (vsim-3817) Port "card_received" of entity "g55_computer_player" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /g55_computer_player_test/CPM File: /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5.vho Line: 39
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_ram_block(block_arch)
+# Loading cycloneii.cycloneii_ram_register(reg_arch)
+# Loading cycloneii.cycloneii_ram_pulse_generator(pgen_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
+# Loading cycloneii.cycloneii_ena_reg(behave)
+# Fatal error at /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/simulation/modelsim/g55_lab5.vho line 39
+#  while elaborating region: /g55_computer_player_test/CPM
+# Fatal error in file /home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd
+#  while elaborating region: /g55_computer_player_test
+# Error loading design

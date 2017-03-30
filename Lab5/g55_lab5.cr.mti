@@ -1,0 +1,21 @@
+{/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player_test.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity g55_computer_player_test
+-- Compiling architecture behav of g55_computer_player_test
+
+} {} {}} {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player.vhd} {1 {vcom -work work -2002 -explicit {/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_computer_player.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity g55_computer_player
+-- Compiling architecture behav of g55_computer_player
+-- Loading package LPM_COMPONENTS
+-- Loading entity g55_stack52
+-- Loading entity g55_rules
+
+} {} {}}
