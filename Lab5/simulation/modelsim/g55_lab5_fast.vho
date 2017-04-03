@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "03/30/2017 18:06:54"
+-- DATE "04/03/2017 09:22:36"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -1137,64 +1137,64 @@ SIGNAL \request_card~1_combout\ : std_logic;
 SIGNAL \request_card$latch~combout\ : std_logic;
 SIGNAL \stack|C0|auto_generated|counter_comb_bita3~combout\ : std_logic;
 SIGNAL state : std_logic_vector(2 DOWNTO 0);
+SIGNAL stack_mode : std_logic_vector(1 DOWNTO 0);
 SIGNAL num_selected : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|C0|auto_generated|safe_q\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S1|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S3|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S5|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S7|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S9|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S11|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S13|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S15|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S17|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S19|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S21|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S23|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S25|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S27|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S29|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S31|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S33|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S35|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S37|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S39|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S41|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S43|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S45|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S47|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S49|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \stack|S51|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \top_card~combout\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL stack_mode : std_logic_vector(1 DOWNTO 0);
 SIGNAL \stack|E0|crc_table|altsyncram_component|auto_generated|q_a\ : std_logic_vector(51 DOWNTO 0);
 SIGNAL \stack|M0|auto_generated|result_node\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S0|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S1|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S2|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S3|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S4|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S5|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S6|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S7|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S8|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S9|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S10|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S11|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S12|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S13|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S14|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S15|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S16|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S17|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S18|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S19|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S20|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S21|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S22|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S23|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S24|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S25|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S26|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S27|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S28|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S29|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S30|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S31|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S32|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S33|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S34|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S35|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S36|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S37|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S38|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S39|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S40|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S41|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S42|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S43|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S44|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S45|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S46|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S47|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S48|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S49|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \stack|S50|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \stack|S51|U1|dffs\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \top_card~combout\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \card_in~combout\ : std_logic_vector(5 DOWNTO 0);
 
 BEGIN

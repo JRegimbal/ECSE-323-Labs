@@ -1,4 +1,4 @@
--- 7 segment decoder -> to hex or to card value ; active low
+-- 7 segment decoder -> to hex or to card value ; active low ; mode = 1 -> card, mode = 0 -> hex
 --
 -- entity name: g55_7_segment_decoder
 -- Copyright (C) 2017 Juliette Regimbal, Qingzhou Yang

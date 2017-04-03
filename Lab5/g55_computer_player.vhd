@@ -27,7 +27,7 @@ entity g55_computer_player is
 end g55_computer_player;
 
 architecture behav of g55_computer_player is
-	signal cards_in_hand : std_logic_vector(5 downto 0);
+	signal cards_in_hand : std_logic_vector(5 downto 0) := "000000";
 	signal legal_move : std_logic;
 	signal card_selected : std_logic_vector(5 downto 0);
 	signal stack_en : std_logic := '0';
