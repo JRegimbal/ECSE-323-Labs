@@ -19,6 +19,7 @@ entity g55_computer_player is
 		card_received : in std_logic;
 		top_card : in std_logic_vector(5 downto 0);
 		card_in : in std_logic_vector(5 downto 0);
+		deal : in std_logic;
 		card_out : out std_logic_vector(5 downto 0);
 		done : out std_logic;
 		request_card : out std_logic;
@@ -48,46 +49,46 @@ begin
 		if (reset = '1') then --async reset
 			state := "000";
 		elsif (clock = '1') then --FSM
-			case state is
-				when "000" => -- first wait state (turn high)
-					stack_en <= '0';
-					stack_mode <= "00";
-					request_card <= '0';
-					done <= '1';
-					if (turn = '0') then
-						state := "001";
-					end if;
-				when "001" => -- second wait state (turn low)
-					request_card <= '0';
-					done <= '1';
-					num_selected <= "000000";
-					if (turn = '1') then -- computer's turn signaled
-						state := "011";
-					end if;
-				when "011" => -- computer's turn begins, scan cards
-					if (legal_move = '1') then --card in hand can be played
-						state := "010";
-					elsif (legal_move = '0' and unsigned(num_selected) < unsigned(cards_in_hand)) then -- try next card
-						num_selected <= std_logic_vector(unsigned(num_selected) + 1);
-					else -- out of cards, draw from deck
-						state := "111";
-					end if;
-				when "010" => -- play the card
-					card_out <= card_selected;
-					stack_mode <= "10"; --POP
-					stack_en <= '1';
-					state := "000"; -- end the turn
-				when "111" => -- request another card
-					request_card <= '1';
-					if (card_received = '1') then 
-						state := "101";
-					end if;
-				when "101" => -- add card to hand
-					stack_mode <= "11"; --PUSH
-					stack_en <= '1';
-					state := "000"; -- end turn
-				when others => state := "000";
-			end case;
+				case state is
+					when "000" => -- first wait state (turn high)
+						stack_en <= '0';
+						stack_mode <= "00";
+						request_card <= '0';
+						done <= '1';
+						if (turn = '0') then
+							state := "001";
+						end if;
+					when "001" => -- second wait state (turn low)
+						request_card <= '0';
+						done <= '1';
+						num_selected <= "000000";
+						if (turn = '1') then -- computer's turn signaled
+							state := "011";
+						end if;
+					when "011" => -- computer's turn begins, scan cards
+						if (legal_move = '1' and deal = '0') then --card in hand can be played
+							state := "010";
+						elsif (legal_move = '0' and unsigned(num_selected) < unsigned(cards_in_hand) and deal = '0') then -- try next card
+							num_selected <= std_logic_vector(unsigned(num_selected) + 1);
+						else -- out of cards, draw from deck
+							state := "111";
+						end if;
+					when "010" => -- play the card
+						card_out <= card_selected;
+						stack_mode <= "10"; --POP
+						stack_en <= '1';
+						state := "000"; -- end the turn
+					when "111" => -- request another card
+						request_card <= '1';
+						if (card_received = '1') then 
+							state := "101";
+						end if;
+					when "101" => -- add card to hand
+						stack_mode <= "11"; --PUSH
+						stack_en <= '1';
+						state := "000"; -- end turn
+					when others => state := "000";
+				end case;	
 		end if;
 	end process;
 end architecture;
