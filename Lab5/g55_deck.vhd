@@ -37,19 +37,22 @@ begin
 	stack : entity g55.g55_stack52 port map(data=>"000000", mode=>stack_mode, clk=>clock, rst=>reset, enable=>stack_en or stack_enable, addr=>rand_raw(31 downto 26), value=>card_val, num=>stack_num);
 	rand : g55_rand_sync port map(clock=>clock, rand=>rand_raw);
 	remaining <= stack_num;
-	process (clock, setup)
-	begin
-		if (setup = '1') then
-			stack_mode <= "01"; -- INIT
-			stack_en <= '1'; -- OR with stack_enable, will always be high when setup
-		else
-			stack_mode <= "10"; -- POP
-			stack_en <= '0';
-		end if;
+	process (clock)
+	variable last_setup : std_logic := setup;
+	begin			
 		if rising_edge(clock) then
-			if (alb = '1' and stack_en = '1' and setup = '0') then
+			if (setup = '1') then
+				stack_mode <= "01"; -- INIT
+				stack_en <= '1'; -- OR with stack_enable, will always be high when setup
+			else
+				stack_mode <= "10"; -- POP
+				stack_en <= '0';
+			end if;
+			
+			if (alb = '1' and stack_enable = '1' and setup = '0') then
 				card_out <= card_val;
 			end if;
+			last_setup := setup;
 		end if;
 	end process;
 end architecture;	

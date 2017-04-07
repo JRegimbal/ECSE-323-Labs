@@ -98,11 +98,10 @@ begin
 					stack_en <= '1';
 					state <= "100";
 				when "100" =>
-					card_out <= card_val;
 					done <= '1';
 					request_card <= '0';
 					stack_mode <= "00";
-					stack_en <= '1';
+					stack_en <= '0';
 					if (turn = '1') then	-- wait for controller to finish and go to next turn
 						state <= "000";
 					end if;
@@ -119,9 +118,13 @@ begin
 					done <= '1';
 					stack_mode <= "11"; -- PUSH
 					stack_en <= '1';
+					state <= "111";
+				
+				when "111" => -- more waiting
 					if (turn = '1') then
 						state <= "000";
 					end if;
+					
 				when others => state <= "000";					
 			end case;
 			last_input := card_in;

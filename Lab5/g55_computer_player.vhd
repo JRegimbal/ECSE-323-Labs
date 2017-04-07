@@ -33,7 +33,7 @@ architecture behav of g55_computer_player is
 	signal stack_en : std_logic := '0';
 	signal stack_mode : std_logic_vector(1 downto 0) := "00";
 	signal num_selected : std_logic_vector(5 downto 0) := "000000";
-	
+	signal state : std_logic_vector(2 downto 0) := "000";
 
 begin
 	stack : entity g55.g55_stack52
@@ -43,11 +43,10 @@ begin
 	num_cards <= cards_in_hand;
 	
 	process (clock, reset)
-	variable state : std_logic_vector(2 downto 0) := "000";
 	variable last_card : std_logic_vector(5 downto 0) := card_in;
 	begin
 		if (reset = '1') then --async reset
-			state := "000";
+			state <= "000";
 		elsif (clock = '1') then --FSM
 				case state is
 					when "000" => -- first wait state (turn high)
@@ -56,38 +55,38 @@ begin
 						request_card <= '0';
 						done <= '1';
 						if (turn = '0') then
-							state := "001";
+							state <= "001";
 						end if;
 					when "001" => -- second wait state (turn low)
 						request_card <= '0';
 						done <= '0'; -- de-asserted to avoid race conditions
 						num_selected <= "000000";
 						if (turn = '1') then -- computer's turn signaled
-							state := "011";
+							state <= "011";
 						end if;
 					when "011" => -- computer's turn begins, scan cards
 						if (legal_move = '1' and setup = '0') then --card in hand can be played
-							state := "010";
+							card_out <= card_selected;
+							state <= "010";
 						elsif (legal_move = '0' and unsigned(num_selected) < unsigned(cards_in_hand) and setup = '0') then -- try next card
 							num_selected <= std_logic_vector(unsigned(num_selected) + 1);
 						else -- out of cards, draw from deck
-							state := "111";
+							state <= "111";
 						end if;
 					when "010" => -- play the card
-						card_out <= card_selected;
 						stack_mode <= "10"; --POP
 						stack_en <= '1';
-						state := "000"; -- end the turn
+						state <= "000"; -- end the turn
 					when "111" => -- request another card
 						request_card <= '1';
 						if (card_in /= last_card) then 
-							state := "101";
+							state <= "101";
 						end if;
 					when "101" => -- add card to hand
 						stack_mode <= "11"; --PUSH
 						stack_en <= '1';
-						state := "000"; -- end turn
-					when others => state := "000";
+						state <= "000"; -- end turn
+					when others => state <= "000";
 				end case;
 				last_card := card_in;
 		end if;

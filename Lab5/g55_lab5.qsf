@@ -65,52 +65,12 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name VHDL_FILE g55_computer_player.vhd
 set_global_assignment -name VHDL_FILE g55_computer_player_test.vhd
-set_global_assignment -name BDF_FILE g55_system.bdf
 set_global_assignment -name VHDL_FILE g55_control.vhd
 set_global_assignment -name QIP_FILE lpm_compare0.qip
 set_global_assignment -name VHDL_FILE g55_player_control.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_L1 -to clock
-set_location_assignment PIN_L22 -to num_hand_sel
-set_location_assignment PIN_L2 -to player_card_sel[5]
-set_location_assignment PIN_M1 -to player_card_sel[4]
-set_location_assignment PIN_M2 -to player_card_sel[3]
-set_location_assignment PIN_U11 -to player_card_sel[2]
-set_location_assignment PIN_U12 -to player_card_sel[1]
-set_location_assignment PIN_W12 -to player_card_sel[0]
-set_location_assignment PIN_T21 -to player_choose
-set_location_assignment PIN_L21 -to player_sel
 set_location_assignment PIN_R22 -to reset
-set_location_assignment PIN_E1 -to ss_nh_suit[0]
-set_location_assignment PIN_H6 -to ss_nh_suit[1]
-set_location_assignment PIN_H5 -to ss_nh_suit[2]
-set_location_assignment PIN_H4 -to ss_nh_suit[3]
-set_location_assignment PIN_G3 -to ss_nh_suit[4]
-set_location_assignment PIN_D2 -to ss_nh_suit[5]
-set_location_assignment PIN_D1 -to ss_nh_suit[6]
-set_location_assignment PIN_J2 -to ss_nh_val[0]
-set_location_assignment PIN_J1 -to ss_nh_val[1]
-set_location_assignment PIN_H2 -to ss_nh_val[2]
-set_location_assignment PIN_H1 -to ss_nh_val[3]
-set_location_assignment PIN_F2 -to ss_nh_val[4]
-set_location_assignment PIN_F1 -to ss_nh_val[5]
-set_location_assignment PIN_E2 -to ss_nh_val[6]
-set_location_assignment PIN_F4 -to ss_t_suit[0]
-set_location_assignment PIN_D5 -to ss_t_suit[1]
-set_location_assignment PIN_D6 -to ss_t_suit[2]
-set_location_assignment PIN_J4 -to ss_t_suit[3]
-set_location_assignment PIN_L8 -to ss_t_suit[4]
-set_location_assignment PIN_F3 -to ss_t_suit[5]
-set_location_assignment PIN_D4 -to ss_t_suit[6]
-set_location_assignment PIN_G5 -to ss_t_val[0]
-set_location_assignment PIN_G6 -to ss_t_val[1]
-set_location_assignment PIN_C2 -to ss_t_val[2]
-set_location_assignment PIN_C1 -to ss_t_val[3]
-set_location_assignment PIN_E3 -to ss_t_val[4]
-set_location_assignment PIN_E4 -to ss_t_val[5]
-set_location_assignment PIN_D3 -to ss_t_val[6]
-set_location_assignment PIN_R17 -to win_pins[0]
-set_location_assignment PIN_U22 -to win_pins[1]
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE g55_stp1.stp
 set_global_assignment -name SIGNALTAP_FILE g55_stp1.stp
@@ -119,43 +79,17 @@ set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_
 set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clock -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=64" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=64" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=1" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "g55_control:inst12|init_state[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "g55_control:inst12|init_state[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "g55_control:inst12|init_state[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "g55_control:inst12|init_state[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "g55_control:inst12|state[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "g55_control:inst12|state[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "g55_control:inst12|state[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "g55_control:inst12|state[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "g55_control:inst12|init_state[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "g55_control:inst12|init_state[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "g55_control:inst12|init_state[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "g55_control:inst12|init_state[3]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "g55_control:inst12|state[0]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "g55_control:inst12|state[1]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "g55_control:inst12|state[2]" -section_id auto_signaltap_0
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "g55_control:inst12|state[3]" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=8" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=8" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=20226" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_g55_lab5_auto_signaltap_0_1_d592," -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_GAP_RECORD=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=21" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=1" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_MODE=PORT" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=51342" -section_id auto_signaltap_0
 set_global_assignment -name VHDL_FILE g55_rand_sync.vhd
 set_global_assignment -name VHDL_FILE g55_deck.vhd
 set_global_assignment -name VHDL_FILE g55_player_control_v2.vhd
@@ -164,6 +98,90 @@ set_global_assignment -name VHDL_FILE g55_control_v2.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT storage_enable -to auto_stp_external_storage_qualifier -section_id auto_signaltap_0
+set_location_assignment PIN_L2 -to card_sel[5]
+set_location_assignment PIN_M1 -to card_sel[4]
+set_location_assignment PIN_M2 -to card_sel[3]
+set_location_assignment PIN_U11 -to card_sel[2]
+set_location_assignment PIN_U12 -to card_sel[1]
+set_location_assignment PIN_W12 -to card_sel[0]
+set_location_assignment PIN_T21 -to make_move_raw
+set_location_assignment PIN_L22 -to play_req_sel
+set_location_assignment PIN_Y21 -to player_legal
+set_location_assignment PIN_R20 -to player_num[0]
+set_location_assignment PIN_R19 -to player_num[1]
+set_location_assignment PIN_U19 -to player_num[2]
+set_location_assignment PIN_Y19 -to player_num[3]
+set_location_assignment PIN_T18 -to player_num[4]
+set_location_assignment PIN_V19 -to player_num[5]
+set_location_assignment PIN_R17 -to win_out[0]
+set_location_assignment PIN_U22 -to win_out[1]
+set_location_assignment PIN_E1 -to ss_pd_suit[0]
+set_location_assignment PIN_H6 -to ss_pd_suit[1]
+set_location_assignment PIN_H5 -to ss_pd_suit[2]
+set_location_assignment PIN_H4 -to ss_pd_suit[3]
+set_location_assignment PIN_G3 -to ss_pd_suit[4]
+set_location_assignment PIN_D2 -to ss_pd_suit[5]
+set_location_assignment PIN_D1 -to ss_pd_suit[6]
+set_location_assignment PIN_J2 -to ss_pd_val[0]
+set_location_assignment PIN_J1 -to ss_pd_val[1]
+set_location_assignment PIN_H2 -to ss_pd_val[2]
+set_location_assignment PIN_H1 -to ss_pd_val[3]
+set_location_assignment PIN_F2 -to ss_pd_val[4]
+set_location_assignment PIN_F1 -to ss_pd_val[5]
+set_location_assignment PIN_E2 -to ss_pd_val[6]
+set_location_assignment PIN_F4 -to ss_td_suit[0]
+set_location_assignment PIN_D5 -to ss_td_suit[1]
+set_location_assignment PIN_D6 -to ss_td_suit[2]
+set_location_assignment PIN_J4 -to ss_td_suit[3]
+set_location_assignment PIN_L8 -to ss_td_suit[4]
+set_location_assignment PIN_F3 -to ss_td_suit[5]
+set_location_assignment PIN_D4 -to ss_td_suit[6]
+set_location_assignment PIN_G5 -to ss_td_val[0]
+set_location_assignment PIN_G6 -to ss_td_val[1]
+set_location_assignment PIN_C2 -to ss_td_val[2]
+set_location_assignment PIN_C1 -to ss_td_val[3]
+set_location_assignment PIN_E3 -to ss_td_val[4]
+set_location_assignment PIN_E4 -to ss_td_val[5]
+set_location_assignment PIN_D3 -to ss_td_val[6]
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "g55_control_v2:controller|state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "g55_control_v2:controller|state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "g55_control_v2:controller|state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "g55_control_v2:controller|state[3]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=4" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_g55_lab5_auto_signaltap_0_1_8cd6," -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "g55_computer_player:inst1|num_cards[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "g55_computer_player:inst1|num_cards[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "g55_computer_player:inst1|num_cards[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "g55_computer_player:inst1|num_cards[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "g55_computer_player:inst1|num_cards[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "g55_computer_player:inst1|num_cards[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "g55_control_v2:controller|state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "g55_control_v2:controller|state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "g55_control_v2:controller|state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "g55_control_v2:controller|state[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "g55_deck:deck|g55_stack52:stack|num[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "g55_deck:deck|g55_stack52:stack|num[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "g55_deck:deck|g55_stack52:stack|num[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "g55_deck:deck|g55_stack52:stack|num[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "g55_deck:deck|g55_stack52:stack|num[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "g55_deck:deck|g55_stack52:stack|num[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "g55_player_module:inst3|num_remaining[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "g55_player_module:inst3|num_remaining[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "g55_player_module:inst3|num_remaining[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "g55_player_module:inst3|num_remaining[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "g55_player_module:inst3|num_remaining[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "g55_player_module:inst3|num_remaining[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to top_card[0] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to top_card[1] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to top_card[2] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to top_card[3] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to top_card[4] -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to top_card[5] -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=28" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=17300" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=12328" -section_id auto_signaltap_0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE "/home/juliette/Documents/ECSE 323/ECSE-323-Labs/Lab5/g55_stp1_auto_stripped.stp"
