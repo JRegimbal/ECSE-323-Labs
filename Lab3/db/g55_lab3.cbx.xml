@@ -73,7 +73,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|g55_stack_slot:S42|busmux:U0|lpm_mux:$00000" CBX_FILE_NAME="mux_qmc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|g55_stack_slot:S51|busmux:U0|lpm_mux:$00000" CBX_FILE_NAME="mux_qmc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|g55_stack_slot:S6|busmux:U0|lpm_mux:$00000" CBX_FILE_NAME="mux_qmc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|lpm_counter:C0" CBX_FILE_NAME="cntr_dkh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|lpm_counter:C0" CBX_FILE_NAME="cntr_qeg.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|g55_stack_slot:S13|lpm_ff:U1|lpm_constant:sc" CBX_FILE_NAME="lpm_constant_5a4.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|g55_stack_slot:S16|busmux:U0|lpm_mux:$00000" CBX_FILE_NAME="mux_qmc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g55_lab3_v2|g55_stack52:STACK|g55_stack_slot:S31|lpm_ff:U1|lpm_constant:sc" CBX_FILE_NAME="lpm_constant_da4.tdf"/>

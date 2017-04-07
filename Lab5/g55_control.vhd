@@ -45,6 +45,7 @@ begin
 	variable state : std_logic_vector(3 downto 0) := "0000";
 	variable init_state : std_logic_vector(3 downto 0) := "0000";
 	variable i : integer := 0;
+	variable turns : integer := 0;
 	begin
 		if (clock = '1') then
 			case state is
@@ -77,6 +78,7 @@ begin
 							computer_card <= deck;
 						elsif (turn = '0') then --player deal
 							player_card <= deck;
+							player_enable <= '1';
 						end if;
 						card_sent <= '1';
 						
@@ -108,7 +110,7 @@ begin
 				when "0001" => -- check
 					top_card_en <= '0';
 					deck_mode <= "10"; --POP
-					if (player_num = "000000" or com_num = "000000") then	
+					if ((player_num = "000000" or com_num = "000000") and turns /= 0) then	
 						state := "1001"; --game over someone won
 					else
 						state := "0011";
@@ -149,11 +151,13 @@ begin
 					end if;
 					
 					if ((turn = '1' and computer_done = '1') or (turn = '0' and player_done = '1')) then	-- turn over
+						turns := turns + 1;
 						state := "0001";
 					end if;
 				
 				when "0111" => -- legal card sent
 					top_card_en <= '1';
+					turns := turns + 1;
 					state := "0001"; -- end turn
 				
 				when "1001" => -- game over

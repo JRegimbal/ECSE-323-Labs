@@ -1108,7 +1108,7 @@ addr[4] => g55_pop_enable:E0.N[4]
 addr[4] => lpm_mux:M0.sel[4]
 addr[5] => g55_pop_enable:E0.N[5]
 addr[5] => lpm_mux:M0.sel[5]
-enable => comb.IN1
+enable => counter_sset.IN1
 enable => enableArray[51].OUTPUTSELECT
 enable => enableArray[50].OUTPUTSELECT
 enable => enableArray[49].OUTPUTSELECT
@@ -1286,16 +1286,16 @@ num[5] <= lpm_counter:C0.q[5]
 
 
 |g55_lab3_v2|g55_stack52:STACK|lpm_counter:C0
-clock => cntr_dkh:auto_generated.clock
+clock => cntr_qeg:auto_generated.clock
 clk_en => ~NO_FANOUT~
-cnt_en => cntr_dkh:auto_generated.cnt_en
-updown => cntr_dkh:auto_generated.updown
-aclr => cntr_dkh:auto_generated.aclr
+cnt_en => cntr_qeg:auto_generated.cnt_en
+updown => cntr_qeg:auto_generated.updown
+aclr => cntr_qeg:auto_generated.aclr
 aset => ~NO_FANOUT~
 aconst => ~NO_FANOUT~
 aload => ~NO_FANOUT~
 sclr => ~NO_FANOUT~
-sset => cntr_dkh:auto_generated.sset
+sset => cntr_qeg:auto_generated.sset
 sconst => ~NO_FANOUT~
 sload => ~NO_FANOUT~
 data[0] => ~NO_FANOUT~
@@ -1305,12 +1305,12 @@ data[3] => ~NO_FANOUT~
 data[4] => ~NO_FANOUT~
 data[5] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
-q[0] <= cntr_dkh:auto_generated.q[0]
-q[1] <= cntr_dkh:auto_generated.q[1]
-q[2] <= cntr_dkh:auto_generated.q[2]
-q[3] <= cntr_dkh:auto_generated.q[3]
-q[4] <= cntr_dkh:auto_generated.q[4]
-q[5] <= cntr_dkh:auto_generated.q[5]
+q[0] <= cntr_qeg:auto_generated.q[0]
+q[1] <= cntr_qeg:auto_generated.q[1]
+q[2] <= cntr_qeg:auto_generated.q[2]
+q[3] <= cntr_qeg:auto_generated.q[3]
+q[4] <= cntr_qeg:auto_generated.q[4]
+q[5] <= cntr_qeg:auto_generated.q[5]
 cout <= <GND>
 eq[0] <= <GND>
 eq[1] <= <GND>
@@ -1330,7 +1330,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|g55_lab3_v2|g55_stack52:STACK|lpm_counter:C0|cntr_dkh:auto_generated
+|g55_lab3_v2|g55_stack52:STACK|lpm_counter:C0|cntr_qeg:auto_generated
 aclr => counter_reg_bit1a[5].ACLR
 aclr => counter_reg_bit1a[4].ACLR
 aclr => counter_reg_bit1a[3].ACLR

@@ -16,10 +16,9 @@ entity g55_computer_player is
 		clock : in std_logic;
 		turn : in std_logic;
 		reset : in std_logic;
-		card_received : in std_logic;
 		top_card : in std_logic_vector(5 downto 0);
 		card_in : in std_logic_vector(5 downto 0);
-		deal : in std_logic;
+		setup : in std_logic;
 		card_out : out std_logic_vector(5 downto 0);
 		done : out std_logic;
 		request_card : out std_logic;
@@ -45,6 +44,7 @@ begin
 	
 	process (clock, reset)
 	variable state : std_logic_vector(2 downto 0) := "000";
+	variable last_card : std_logic_vector(5 downto 0) := card_in;
 	begin
 		if (reset = '1') then --async reset
 			state := "000";
@@ -60,15 +60,15 @@ begin
 						end if;
 					when "001" => -- second wait state (turn low)
 						request_card <= '0';
-						done <= '1';
+						done <= '0'; -- de-asserted to avoid race conditions
 						num_selected <= "000000";
 						if (turn = '1') then -- computer's turn signaled
 							state := "011";
 						end if;
 					when "011" => -- computer's turn begins, scan cards
-						if (legal_move = '1' and deal = '0') then --card in hand can be played
+						if (legal_move = '1' and setup = '0') then --card in hand can be played
 							state := "010";
-						elsif (legal_move = '0' and unsigned(num_selected) < unsigned(cards_in_hand) and deal = '0') then -- try next card
+						elsif (legal_move = '0' and unsigned(num_selected) < unsigned(cards_in_hand) and setup = '0') then -- try next card
 							num_selected <= std_logic_vector(unsigned(num_selected) + 1);
 						else -- out of cards, draw from deck
 							state := "111";
@@ -80,7 +80,7 @@ begin
 						state := "000"; -- end the turn
 					when "111" => -- request another card
 						request_card <= '1';
-						if (card_received = '1') then 
+						if (card_in /= last_card) then 
 							state := "101";
 						end if;
 					when "101" => -- add card to hand
@@ -88,7 +88,8 @@ begin
 						stack_en <= '1';
 						state := "000"; -- end turn
 					when others => state := "000";
-				end case;	
+				end case;
+				last_card := card_in;
 		end if;
 	end process;
 end architecture;

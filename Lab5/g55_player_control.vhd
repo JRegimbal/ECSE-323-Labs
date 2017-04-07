@@ -1,4 +1,4 @@
-library ieee;
+	library ieee;
 library g55;
 use ieee.std_logic_1164.all;
 
